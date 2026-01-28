@@ -26,6 +26,153 @@
     <script async="" src="
 https://www.googletagmanager.com/gtag/js?id=G-1BESF224BJ"></script>
     <script>   window.dataLayer = window.dataLayer || []; function gtag() { dataLayer.push(arguments); } gtag('js', new Date()); gtag('config', 'G-1BESF224BJ'); </script>
+<style>
+:root {
+  --primary: #2563eb;
+  --light-bg: #f8fafc;
+  --card-bg: #ffffff;
+  --text-muted: #64748b;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Segoe UI", sans-serif;
+}
+
+body {
+  background: #fff;
+  color: #0f172a;
+}
+
+/* ================= HEADER ================= */
+.section {
+  text-align: center;
+  padding: 60px 20px 40px;
+}
+
+.section h1 {
+  font-size: 40px;
+  margin-bottom: 10px;
+}
+
+.section p {
+  max-width: 850px;
+  margin: auto;
+  font-size: 18px;
+  color: var(--text-muted);
+}
+
+/* ================= TABS ================= */
+.tabs {
+  margin: 40px auto;
+  display: flex;
+  gap: 10px;
+  background: var(--light-bg);
+  padding: 10px;
+  border-radius: 50px;
+  width: fit-content;
+}
+
+.tab {
+  padding: 12px 28px;
+  border-radius: 40px;
+  cursor: pointer;
+  font-weight: 500;
+  color: var(--text-muted);
+  transition: 0.3s;
+}
+
+.tab.active {
+  background: #fff;
+  color: var(--primary);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+}
+
+/* ================= SEMICIRCLE AREA ================= */
+.orbit-wrapper {
+  position: relative;
+  height: 460px;
+  max-width: 1200px;
+  margin: auto;
+  overflow: hidden;
+}
+
+/* SEMICIRCLE ARCS */
+.arc {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  border: 2px solid #e5e7eb;
+  border-bottom: none;
+  border-radius: 1000px 1000px 0 0;
+}
+
+.arc.large {
+  width: 90%;
+  height: 90%;
+  bottom: 0;
+}
+
+.arc.medium {
+  width: 70%;
+  height: 70%;
+  bottom: 0;
+}
+
+.arc.small {
+  width: 50%;
+  height: 50%;
+  bottom: 0;
+}
+
+/* ================= TECH CARD ================= */
+.tech {
+  position: absolute;
+  width: 110px;
+  padding: 14px 10px;
+  background: var(--card-bg);
+  border-radius: 18px;
+  text-align: center;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+  animation: fadeIn 0.4s ease;
+}
+
+.tech img {
+  width: 40px;
+  margin-bottom: 8px;
+}
+
+.tech span {
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.tech:hover {
+  transform: translateY(-8px);
+  transition: 0.3s;
+}
+
+/* ================= SEMICIRCLE POSITIONS ================= */
+.p1 { bottom: 82%; left: 50%; transform: translateX(-50%); }
+.p2 { bottom: 65%; right: 18%; }
+.p3 { bottom: 40%; right: 5%; }
+.p4 { bottom: 40%; left: 5%; }
+.p5 { bottom: 65%; left: 18%; }
+
+/* ================= ANIMATION ================= */
+@keyframes fadeIn {
+  from { opacity: 0; transform: scale(0.9); }
+  to { opacity: 1; transform: scale(1); }
+}
+
+/* ================= MOBILE ================= */
+@media (max-width: 768px) {
+  .orbit-wrapper { height: 380px; }
+  .tech { width: 95px; }
+}
+</style>
 </head>
 
 <body class="path-frontpage page-node-type-static-pages">
@@ -913,134 +1060,96 @@ https://www.googletagmanager.com/gtag/js?id=G-1BESF224BJ"></script>
 
 
                                 <div>
-                                    <section class="common-section common-home-sect3" id="common-home-sect3">
-                                        <div class="container-fluid">
-                                            <div class="row align-items-center">
-                                                <div class="col-sm-12">
-                                                    <div class="common-sect-para" data-aos="fade-up"
-                                                        data-aos-delay="300" data-aos-anchor=".common-home-sect3">
-                                                        <h2>Technology Partner to a <br>Shared <span
-                                                                class="text-gradient1">Tomorrow</span></h2>
-                                                        <h6>Collaborating for success in a dynamic world</h6>
-                                                    </div>
-                                                    <div class=" u-marquee-outer" data-aos="fade-up"
-                                                        data-aos-delay="900" data-aos-anchor=".common-home-sect3"><!-- 
-                    <div class="u-marquee app-footer-marquee">
-                         -->
-                                                        <div class="slick-slider">
-                                                            <div class="slick-carousel-marquee-lr slick-slider-common">
-                                                                <div class="u-marquee-content">
-                                                                    <div class="marquee-panel">Strategic Consultancy
-                                                                    </div>
-                                                                </div>
-                                                                <div class="u-marquee-content">
-                                                                    <div class="marquee-panel">Rapid Agility</div>
-                                                                </div>
-                                                                <div class="u-marquee-content">
-                                                                    <div class="marquee-panel">Artificial Intelligence
-                                                                    </div>
-                                                                </div>
-                                                                <div class="u-marquee-content">
-                                                                    <div class="marquee-panel">Deep Learning Models
-                                                                    </div>
-                                                                </div>
-                                                                <div class="u-marquee-content">
-                                                                    <div class="marquee-panel">Design Sprint</div>
-                                                                </div>
-                                                                <div class="u-marquee-content">
-                                                                    <div class="marquee-panel">Mobile Banking</div>
-                                                                </div>
-                                                                <div class="u-marquee-content">
-                                                                    <div class="marquee-panel">Strategic Consultancy
-                                                                    </div>
-                                                                </div>
-                                                                <div class="u-marquee-content">
-                                                                    <div class="marquee-panel">Rapid Agility</div>
-                                                                </div>
-                                                                <div class="u-marquee-content">
-                                                                    <div class="marquee-panel">Artificial Intelligence
-                                                                    </div>
-                                                                </div>
-                                                                <div class="u-marquee-content">
-                                                                    <div class="marquee-panel">Deep Learning Models
-                                                                    </div>
-                                                                </div>
-                                                                <div class="u-marquee-content">
-                                                                    <div class="marquee-panel">Design Sprint</div>
-                                                                </div>
-                                                                <div class="u-marquee-content">
-                                                                    <div class="marquee-panel">Mobile Banking</div>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                        <div class="slick-slider" dir="rtl">
-                                                            <div class="slick-carousel-marquee-rl slick-slider-common">
-                                                                <div class="u-marquee-content">
-                                                                    <div class="marquee-panel">Cybersecurity</div>
-                                                                </div>
-                                                                <div class="u-marquee-content">
-                                                                    <div class="marquee-panel">Intelligent Insurance
-                                                                        Automation</div>
-                                                                </div>
-                                                                <div class="u-marquee-content">
-                                                                    <div class="marquee-panel">Digital Transformation
-                                                                    </div>
-                                                                </div>
-                                                                <div class="u-marquee-content">
-                                                                    <div class="marquee-panel">DevSecOps</div>
-                                                                </div>
-                                                                <div class="u-marquee-content">
-                                                                    <div class="marquee-panel">UPI Interfaces</div>
-                                                                </div>
-                                                                <div class="u-marquee-content">
-                                                                    <div class="marquee-panel">Data-driven BI</div>
-                                                                </div>
-                                                                <div class="u-marquee-content">
-                                                                    <div class="marquee-panel">Digital e-Rupee</div>
-                                                                </div>
-                                                                <div class="u-marquee-content">
-                                                                    <div class="marquee-panel">Payments Infrastructure
-                                                                    </div>
-                                                                </div>
-                                                                <div class="u-marquee-content">
-                                                                    <div class="marquee-panel">Cybersecurity</div>
-                                                                </div>
-                                                                <div class="u-marquee-content">
-                                                                    <div class="marquee-panel">Intelligent Insurance
-                                                                        Automation</div>
-                                                                </div>
-                                                                <div class="u-marquee-content">
-                                                                    <div class="marquee-panel">Digital Transformation
-                                                                    </div>
-                                                                </div>
-                                                                <div class="u-marquee-content">
-                                                                    <div class="marquee-panel">DevSecOps</div>
-                                                                </div>
-                                                                <div class="u-marquee-content">
-                                                                    <div class="marquee-panel">UPI Interfaces</div>
-                                                                </div>
-                                                                <div class="u-marquee-content">
-                                                                    <div class="marquee-panel">Data-driven BI</div>
-                                                                </div>
-                                                                <div class="u-marquee-content">
-                                                                    <div class="marquee-panel">Digital e-Rupee</div>
-                                                                </div>
-                                                                <div class="u-marquee-content">
-                                                                    <div class="marquee-panel">Payments Infrastructure
-                                                                    </div>
-                                                                </div>
-                                                                <div class="u-marquee-content">
-                                                                    <div class="marquee-panel">Merchant Management
-                                                                        System</div>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </section>
-                                </div>
+                                    <section class="section">
+  <h1>Cutting-Edge Technology Stack</h1>
+  <p>
+    We use the latest technologies and frameworks to build scalable,
+    enterprise-grade solutions across every stage of your development journey.
+  </p>
+
+  <div class="tabs">
+    <div class="tab active">Frontend</div>
+    <div class="tab">Backend</div>
+    <div class="tab">Full Stack</div>
+    <div class="tab">CMS</div>
+    <div class="tab">Database</div>
+    <div class="tab">Server</div>
+  </div>
+</section>
+
+<div class="orbit-wrapper">
+  <div class="arc large"></div>
+  <div class="arc medium"></div>
+  <div class="arc small"></div>
+
+  <div id="tech-container"></div>
+</div>
+
+<script>
+const techData = {
+  Frontend: [
+    { name: "Flutter", icon: "flutter/flutter-original.svg", pos: "p1" },
+    { name: "iOS", icon: "apple/apple-original.svg", pos: "p2" },
+    { name: "React JS", icon: "react/react-original.svg", pos: "p3" },
+    { name: "Angular", icon: "angularjs/angularjs-original.svg", pos: "p4" },
+    { name: "Ionic", icon: "ionic/ionic-original.svg", pos: "p5" }
+  ],
+
+  Backend: [
+    { name: "Node JS", icon: "nodejs/nodejs-original.svg", pos: "p1" },
+    { name: "Java", icon: "java/java-original.svg", pos: "p3" },
+    { name: "Python", icon: "python/python-original.svg", pos: "p4" }
+  ],
+
+  "Full Stack": [
+    { name: "MERN", icon: "mongodb/mongodb-original.svg", pos: "p2" },
+    { name: "MEAN", icon: "angularjs/angularjs-original.svg", pos: "p5" }
+  ],
+
+  CMS: [
+    { name: "WordPress", icon: "wordpress/wordpress-original.svg", pos: "p2" },
+    { name: "Strapi", icon: "strapi/strapi-original.svg", pos: "p5" }
+  ],
+
+  Database: [
+    { name: "MongoDB", icon: "mongodb/mongodb-original.svg", pos: "p2" },
+    { name: "MySQL", icon: "mysql/mysql-original.svg", pos: "p1" },
+    { name: "PostgreSQL", icon: "postgresql/postgresql-original.svg", pos: "p5" }
+  ],
+
+  Server: [
+    { name: "AWS", icon: "amazonwebservices/amazonwebservices-original.svg", pos: "p2" },
+    { name: "Docker", icon: "docker/docker-original.svg", pos: "p1" },
+    { name: "Nginx", icon: "nginx/nginx-original.svg", pos: "p5" }
+  ]
+};
+
+const tabs = document.querySelectorAll(".tab");
+const container = document.getElementById("tech-container");
+
+function loadTech(tab) {
+  container.innerHTML = "";
+  techData[tab].forEach(t => {
+    const div = document.createElement("div");
+    div.className = `tech ${t.pos}`;
+    div.innerHTML = `
+      <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/${t.icon}">
+      <span>${t.name}</span>
+    `;
+    container.appendChild(div);
+  });
+}
+
+loadTech("Frontend");
+
+tabs.forEach(tab => {
+  tab.addEventListener("click", () => {
+    tabs.forEach(t => t.classList.remove("active"));
+    tab.classList.add("active");
+    loadTech(tab.textContent.trim());
+  });
+});
+</script></div>
 
                             </div>
                             <div id="block-Mamo -subtheme-homepagefour"
@@ -1561,966 +1670,443 @@ https://www.googletagmanager.com/gtag/js?id=G-1BESF224BJ"></script>
                             <div id="block-Mamo -subtheme-homepagesix"
                                 class="block block-block-content block-block-content30ed67f1-a96a-4abe-85c6-01d9bc8acc8d">
 
+<!--end-->
 
-
-                                <div>
-                                    <section class="common-section common-blog-sect common-industries-sect">
-                                        <div class="container">
-                                            <div class="row">
-                                                <div class="col-sm-12">
-                                                    <div class="common-sect-para common-sect-para-center"
-                                                        data-aos="fade-up" data-aos-delay="300"
-                                                        data-aos-anchor=".common-industries-sect">
-                                                        <h2>Our <span class="text-gradient1">Industries</span></h2>
-                                                        <h6>From long-established sectors to emerging ones, we partner
-                                                            to deliver the solutions you need.</h6>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="container slick-container-xs-p0">
-                                            <div data-aos="fade-up" data-aos-delay="600"
-                                                data-aos-anchor=".common-industries-sect">
-                                                <div class="row">
-                                                    <div class="col-sm-12">
-                                                        <div class="slick-slider slick-slider-progress">
-                                                            <div class="slick-carousel-item-3 slick-slider-common">
-                                                                <div class="item">
-                                                                    <div class="products-card industries-card1"
-                                                                        onmouseenter="Banking_and_fintech.play()"
-                                                                        onmouseleave="Banking_and_fintech.stop()">
-                                                                        <div class="products-card-img">
-                                                                            <div class="lottie-ani-wrap"><a
-                                                                                    href="industries/banking-fintech.html"><lottie-player
-                                                                                        class="dotlottie-ani show-desktop hide-mobile"
-                                                                                        id="Banking_and_fintech"
-                                                                                        src="/themes/custom/Mamo _subtheme/lottiefiles/Industry/Banking_and_fintech.json"
-                                                                                        background="transparent.html"
-                                                                                        speed="1" direction="1" hover=""
-                                                                                        playmode="normal"
-                                                                                        loop=""></lottie-player><lottie-player
-                                                                                        class="dotlottie-ani hide-desktop show-mobile"
-                                                                                        autoplay=""
-                                                                                        id="Banking_and_fintech-xs"
-                                                                                        src="/themes/custom/Mamo _subtheme/lottiefiles/Industry/Banking_and_fintech.json"
-                                                                                        background="transparent.html"
-                                                                                        speed="1" direction="1"
-                                                                                        playmode="normal"
-                                                                                        loop=""></lottie-player></a>
-                                                                            </div>
-                                                                        </div>
-                                                                        <div class="products-card-text">
-                                                                            <h5><a href="industries/banking-fintech.html">Banking
-                                                                                    and </a><br><a
-                                                                                    href="industries/banking-fintech.html">Fintech</a>
-                                                                            </h5>
-                                                                            <p class="para"><a
-                                                                                    href="industries/banking-fintech.html">Build
-                                                                                    trust, grow your financial platform.
-                                                                                    We help onboard, delight, and retain
-                                                                                    users.</a></p>
-                                                                        </div>
-                                                                    </div>
-                                                                </div>
-                                                                <div class="item">
-                                                                    <div class="products-card industries-card2"
-                                                                        onmouseenter="Insurance_and_insurtech.play()"
-                                                                        onmouseleave="Insurance_and_insurtech.stop()">
-                                                                        <div class="products-card-img">
-                                                                            <div class="lottie-ani-wrap"><a
-                                                                                    href="industries/insurance-insurtech.html"><lottie-player
-                                                                                        class="dotlottie-ani show-desktop hide-mobile"
-                                                                                        id="Insurance_and_insurtech"
-                                                                                        src="/themes/custom/Mamo _subtheme/lottiefiles/Industry/Insurance_and_insurtech.json"
-                                                                                        background="transparent.html"
-                                                                                        speed="1" direction="1" hover=""
-                                                                                        playmode="normal"
-                                                                                        loop=""></lottie-player><lottie-player
-                                                                                        class="dotlottie-ani hide-desktop show-mobile"
-                                                                                        id="Insurance_and_insurtech-xs"
-                                                                                        src="/themes/custom/Mamo _subtheme/lottiefiles/Industry/Insurance_and_insurtech.json"
-                                                                                        background="transparent.html"
-                                                                                        autoplay="" speed="1"
-                                                                                        direction="1" playmode="normal"
-                                                                                        loop=""></lottie-player></a>
-                                                                            </div>
-                                                                        </div>
-                                                                        <div class="products-card-text">
-                                                                            <h5><a
-                                                                                    href="industries/insurance-insurtech.html">Insurance
-                                                                                    and InsurTech</a></h5>
-                                                                            <p class="para"><a
-                                                                                    href="industries/insurance-insurtech.html">AI/ML
-                                                                                    unlocks growth: better KPIs,
-                                                                                    automated tasks, happier
-                                                                                    customers.</a></p>
-                                                                        </div>
-                                                                    </div>
-                                                                </div>
-                                                                <div class="item">
-                                                                    <div class="products-card industries-card3"
-                                                                        onmouseenter="Tech_startup.play()"
-                                                                        onmouseleave="Tech_startup.stop()">
-                                                                        <div class="products-card-img">
-                                                                            <div class="lottie-ani-wrap"><a
-                                                                                    href="industries/emerging-tech-startups.html"><lottie-player
-                                                                                        class="dotlottie-ani show-desktop hide-mobile"
-                                                                                        id="Tech_startup"
-                                                                                        src="/themes/custom/Mamo _subtheme/lottiefiles/Industry/Tech_startup.json"
-                                                                                        background="transparent.html"
-                                                                                        speed="1" direction="1" hover=""
-                                                                                        playmode="normal"
-                                                                                        loop=""></lottie-player><lottie-player
-                                                                                        class="dotlottie-ani hide-desktop show-mobile"
-                                                                                        autoplay="" id="Tech_startup-xs"
-                                                                                        src="/themes/custom/Mamo _subtheme/lottiefiles/Industry/Tech_startup.json"
-                                                                                        background="transparent.html"
-                                                                                        speed="1" direction="1"
-                                                                                        playmode="normal"
-                                                                                        loop=""></lottie-player></a>
-                                                                            </div>
-                                                                        </div>
-                                                                        <div class="products-card-text">
-                                                                            <h5><a
-                                                                                    href="industries/emerging-tech-startups.html">Emerging
-                                                                                    Tech Startup</a></h5>
-                                                                            <p class="para"><a
-                                                                                    href="industries/emerging-tech-startups.html">Startups,
-                                                                                    we fuel your fire! Our experienced
-                                                                                    team will help you validate, build,
-                                                                                    launch & scale your tech ideas.</a>
-                                                                            </p>
-                                                                        </div>
-                                                                    </div>
-                                                                </div>
-                                                            </div>
-                                                            <div class="progress custom-progress" role="progressbar"
-                                                                aria-valuemin="0" aria-valuemax="100"> </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </section>
-                                </div>
-
-                            </div>
-                            <div id="block-Mamo -subtheme-homepageseven"
-                                class="block block-block-content block-block-contentbd8792c5-9ffa-4279-b5f8-f450763ad069">
+<!-- home6 Integration Section -->
 
 
 
-                                <div>
-                                    <section class="common-section common-home-sect6 common-testi-sect">
-                                        <div class="container">
-                                            <div class="row">
-                                                <div class="col-sm-12">
-                                                    <div class="common-sect-para" data-aos="fade-up"
-                                                        data-aos-delay="300" data-aos-anchor=".common-home-sect6">
-                                                        <p> </p>
-                                                        <h4>Building</h4>
-                                                        <h2 class="text-gradient1">Success St<span><img
-                                                                    class="stories-img-icon lazy"
-                                                                    data-src="/images/stories.png"
-                                                                    alt="o" width="96" height="48"
-                                                                    loading="lazy"></span>ries</h2>
-                                                        <h4 class="text-right">Together</h4>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="container slick-container-xs-p0">
-                                                <div class="show-desktop hide-mobile">
-                                                    <div class="row">
-                                                        <div class="col-lg-3 col-md-6 lg-mt70" data-aos="fade-up"
-                                                            data-aos-delay="600" data-aos-anchor=".common-home-sect6">
-                                                            <!-- 1 -->
-                                                            <div class="testi-card" data-bs-target="#testimonial-modal1"
-                                                                data-bs-toggle="modal">
-                                                                <div class="testi-card-head"><img
-                                                                        data-src="images/testi1.svg"
-                                                                        alt="testi1" class="lazy" width="62" height="62"
-                                                                        loading="lazy"></div>
-                                                                <div class="testi-card-body">
-                                                                    <p class="para">Mamo  has been an exceptional
-                                                                        partner to me and my companies over the
-                                                                        many years we've been a partner. From initial
-                                                                        conceptual design to hardcore
-                                                                        innovation development and testing, to scaling a
-                                                                        cost-effective technology
-                                                                        organization, Mamo  is an exceptional firm.</p>
-                                                                </div>
-                                                            </div><!-- 1 -->
-                                                            <div class="testi-card" data-bs-target="#testimonial-modal2"
-                                                                data-bs-toggle="modal">
-                                                                <div class="testi-card-head"><img
-                                                                        data-src="images/testi2.svg"
-                                                                        alt="testi2" class="lazy" width="62" height="62"
-                                                                        loading="lazy"></div>
-                                                                <div class="testi-card-body">
-                                                                    <p class="para">Working with Mamo  has been an
-                                                                        outstanding experience for our software
-                                                                        needs. The team consistently accommodates our
-                                                                        timelines and goes above and beyond to
-                                                                        surpass our expectations. They have delivered a
-                                                                        fantastic software package that
-                                                                        enhances our business operations. I highly
-                                                                        recommend Mamo  for their exceptional
-                                                                        service and solutions.</p>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                        <div class="col-lg-3 col-md-6" data-aos="fade-up"
-                                                            data-aos-delay="900" data-aos-anchor=".common-home-sect6">
-                                                            <!-- 1 -->
-                                                            <div class="testi-card" data-bs-target="#testimonial-modal3"
-                                                                data-bs-toggle="modal">
-                                                                <div class="testi-card-head"><img
-                                                                        data-src="images/testi3.svg"
-                                                                        alt="testi1" class="lazy" width="62" height="62"
-                                                                        loading="lazy"></div>
-                                                                <div class="testi-card-body">
-                                                                    <p class="para">We faced the challenge of finding
-                                                                        the right talent with the right skills
-                                                                        at the right price, a task crucial for executing
-                                                                        Momentum's vision at the required
-                                                                        speed and scale. That's why we turned to our
-                                                                        strategic partner, Mamo , they played
-                                                                        a pivotal role in our journey. Our partnership
-                                                                        has been collaborative and fruitful,
-                                                                        and we value their expertise and support,
-                                                                        knowing they can scale up our team when
-                                                                        needed.</p>
-                                                                </div>
-                                                            </div><!-- 1 -->
-                                                            <div class="testi-card" data-bs-target="#testimonial-modal4"
-                                                                data-bs-toggle="modal">
-                                                                <div class="testi-card-head"><img
-                                                                        data-src="images/testi4.svg"
-                                                                        alt="testi1" class="lazy" width="62" height="62"
-                                                                        loading="lazy"></div>
-                                                                <div class="testi-card-body">
-                                                                    <p class="para">Mamo  upgraded our legacy software,
-                                                                        enhancing operational efficiency
-                                                                        and innovation. Their seamless integration of
-                                                                        modern technology and meticulous data
-                                                                        migration resulted in improved performance and
-                                                                        scalability.</p>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                        <div class="col-lg-3 col-md-6 lg-mt70" data-aos="fade-up"
-                                                            data-aos-delay="1200" data-aos-anchor=".common-home-sect6">
-                                                            <!-- 1 -->
-                                                            <div class="testi-card" data-bs-target="#testimonial-modal5"
-                                                                data-bs-toggle="modal">
-                                                                <div class="testi-card-head"><img
-                                                                        data-src="images/testi5.svg"
-                                                                        alt="testi2" class="lazy" width="62" height="62"
-                                                                        loading="lazy"></div>
-                                                                <div class="testi-card-body">
-                                                                    <p class="para">When we were looking for a good
-                                                                        partner to digitize the operations of
-                                                                        Utkarsh Small Finance Bank; Mamo  as a
-                                                                        technology partner helped us with their
-                                                                        consultancy, UX and agile development methods
-                                                                        for meeting our business requirements
-                                                                        and delivery in our digital transformation
-                                                                        initiatives. They have demonstrated a
-                                                                        strong understanding of technology, governance
-                                                                        and collaboration between the teams.
-                                                                    </p>
-                                                                </div>
-                                                            </div><!-- 1 -->
-                                                            <div class="testi-card" data-bs-target="#testimonial-modal6"
-                                                                data-bs-toggle="modal">
-                                                                <div class="testi-card-head"><img
-                                                                        data-src="images/testi6.svg"
-                                                                        alt="testi2" class="lazy" width="62" height="62"
-                                                                        loading="lazy"></div>
-                                                                <div class="testi-card-body">
-                                                                    <p class="para">Working with Mamo  Technologies has
-                                                                        been an absolute game-changer for
-                                                                        Emtel Fintech. Their cutting-edge technological
-                                                                        solutions have acted as catalyst to
-                                                                        reach new heights in the payments space for
-                                                                        Emtel and in Mauritius. Their expertise
-                                                                        has been instrumental in the development of our
-                                                                        payment App - blink, in improving
-                                                                        our customer experiences, and driving overall
-                                                                        business growth. Mamo  Technologies
-                                                                        has been a reliable and innovative partner.</p>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                        <div class="col-lg-3 col-md-6" data-aos="fade-up"
-                                                            data-aos-delay="1400" data-aos-anchor=".common-home-sect6">
-                                                            <!-- 1 -->
-                                                            <div class="testi-card" data-bs-target="#testimonial-modal7"
-                                                                data-bs-toggle="modal">
-                                                                <div class="testi-card-head"><img
-                                                                        data-src="images/testi7.svg"
-                                                                        alt="testi1" class="lazy" width="62" height="62"
-                                                                        loading="lazy"></div>
-                                                                <div class="testi-card-body">
-                                                                    <p class="para">Working with Mamo  has been
-                                                                        transformative, with their remarkable
-                                                                        ability to collaboratively explore diverse
-                                                                        approaches and overcome challenges
-                                                                        contributing significantly to Kotak's success.
-                                                                        Their innovative mindset and
-                                                                        proactive approach have proven instrumental in
-                                                                        navigating complexities and finding
-                                                                        unique solutions. Choosing Mamo  as our partner
-                                                                        has been strategic, with their
-                                                                        commitment to excellence and seamless
-                                                                        translation of ideas into reality setting them
-                                                                        apart in the industry.</p>
-                                                                </div>
-                                                            </div><!-- 1 -->
-                                                            <div class="testi-card" data-bs-target="#testimonial-modal8"
-                                                                data-bs-toggle="modal">
-                                                                <div class="testi-card-head"><img
-                                                                        data-src="images/testi8.svg"
-                                                                        alt="testi2" class="lazy" width="62" height="62"
-                                                                        loading="lazy"></div>
-                                                                <div class="testi-card-body">
-                                                                    <p class="para">Mamo  exemplifies innovation,
-                                                                        consistently offering easy solutions to
-                                                                        complex problems. Their team's dedication to
-                                                                        excellence and seamless collaboration
-                                                                        showcases remarkable teamwork. Working with
-                                                                        Mamo  has been a testament to their
-                                                                        innovative approach, making them an invaluable
-                                                                        partner for tackling challenges
-                                                                        efficiently.</p>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="show-mobile hide-desktop" data-aos="fade-up"
-                                                data-aos-delay="600" data-aos-anchor=".common-home-sect6">
-                                                <div class="row">
-                                                    <div class="col-sm-12">
-                                                        <div class="slick-slider-progress">
-                                                            <div class="slick-carousel-stories slick-slider-common">
-                                                                <!-- 1 -->
-                                                                <div class="item">
-                                                                    <div class="testi-card"
-                                                                        data-bs-target="#testimonial-modal1"
-                                                                        data-bs-toggle="modal">
-                                                                        <div class="testi-card-head"><img
-                                                                                data-src="/themes/custom/Mamo _subtheme/images/testimonial/testi1.svg"
-                                                                                class="lazy" alt="testi1" width="62"
-                                                                                height="62" loading="lazy"></div>
-                                                                        <div class="testi-card-body">
-                                                                            <p class="para">Mamo  has been an
-                                                                                exceptional partner to me and my
-                                                                                companies
-                                                                                over the many years we've been a
-                                                                                partner. From initial conceptual design
-                                                                                to
-                                                                                hardcore innovation development and
-                                                                                testing, to scaling a cost-effective
-                                                                                technology organization, Mamo  is an
-                                                                                exceptional firm.</p>
-                                                                        </div>
-                                                                    </div><!-- 1 -->
-                                                                </div>
-                                                                <div class="item">
-                                                                    <div class="testi-card"
-                                                                        data-bs-target="#testimonial-modal2"
-                                                                        data-bs-toggle="modal">
-                                                                        <div class="testi-card-head"><img
-                                                                                data-src="/themes/custom/Mamo _subtheme/images/testimonial/testi2.svg"
-                                                                                class="lazy" alt="testi2" width="62"
-                                                                                height="62" loading="lazy"></div>
-                                                                        <div class="testi-card-body">
-                                                                            <p class="para">Working with Mamo  has been
-                                                                                an outstanding experience for our
-                                                                                software needs. The team consistently
-                                                                                accommodates our timelines and goes
-                                                                                above and beyond to surpass our
-                                                                                expectations. They have delivered a
-                                                                                fantastic software package that enhances
-                                                                                our business operations. I highly
-                                                                                recommend Mamo  for their exceptional
-                                                                                service and solutions.</p>
-                                                                        </div>
-                                                                    </div><!-- 1 -->
-                                                                </div>
-                                                                <div class="item">
-                                                                    <div class="testi-card"
-                                                                        data-bs-target="#testimonial-modal3"
-                                                                        data-bs-toggle="modal">
-                                                                        <div class="testi-card-head"><img
-                                                                                data-src="/themes/custom/Mamo _subtheme/images/testimonial/testi3.svg"
-                                                                                class="lazy" alt="testi1" width="62"
-                                                                                height="62" loading="lazy"></div>
-                                                                        <div class="testi-card-body">
-                                                                            <p class="para">We faced the challenge of
-                                                                                finding the right talent with the
-                                                                                right skills at the right price, a task
-                                                                                crucial for executing Momentum's
-                                                                                vision at the required speed and scale.
-                                                                                That's why we turned to our
-                                                                                strategic partner, Mamo  , they played
-                                                                                a pivotal role in our journey. Our
-                                                                                partnership has been collaborative and
-                                                                                fruitful, and we value their
-                                                                                expertise and support, knowing they can
-                                                                                scale up our team when needed.</p>
-                                                                        </div>
-                                                                    </div><!-- 1 -->
-                                                                </div>
-                                                                <div class="item">
-                                                                    <div class="testi-card"
-                                                                        data-bs-target="#testimonial-modal4"
-                                                                        data-bs-toggle="modal">
-                                                                        <div class="testi-card-head"><img
-                                                                                data-src="/themes/custom/Mamo _subtheme/images/testimonial/testi4.svg"
-                                                                                class="lazy" alt="testi2" width="62"
-                                                                                height="62" loading="lazy"></div>
-                                                                        <div class="testi-card-body">
-                                                                            <p class="para">Mamo  upgraded our legacy
-                                                                                software, enhancing operational
-                                                                                efficiency and innovation. Their
-                                                                                seamless integration of modern
-                                                                                technology
-                                                                                and meticulous data migration resulted
-                                                                                in improved performance and
-                                                                                scalability.</p>
-                                                                        </div>
-                                                                    </div><!-- 1 -->
-                                                                </div>
-                                                                <div class="item">
-                                                                    <div class="testi-card"
-                                                                        data-bs-target="#testimonial-modal5"
-                                                                        data-bs-toggle="modal">
-                                                                        <div class="testi-card-head"><img
-                                                                                data-src="/themes/custom/Mamo _subtheme/images/testimonial/testi5.svg"
-                                                                                class="lazy" alt="testi1" width="62"
-                                                                                height="62" loading="lazy"></div>
-                                                                        <div class="testi-card-body">
-                                                                            <p class="para">When we were looking for a
-                                                                                good partner to digitize the
-                                                                                operations of Utkarsh Small Finance
-                                                                                Bank; Mamo  as a technology partner
-                                                                                helped us with their consultancy, UX and
-                                                                                agile development methods for
-                                                                                meeting our business requirements and
-                                                                                delivery in our digital transformation
-                                                                                initiatives. They have demonstrated a
-                                                                                strong understanding of technology,
-                                                                                governance and collaboration between the
-                                                                                teams.</p>
-                                                                        </div>
-                                                                    </div><!-- 1 -->
-                                                                </div>
-                                                                <div class="item">
-                                                                    <div class="testi-card"
-                                                                        data-bs-target="#testimonial-modal6"
-                                                                        data-bs-toggle="modal">
-                                                                        <div class="testi-card-head"><img
-                                                                                data-src="/themes/custom/Mamo _subtheme/images/testimonial/testi6.svg"
-                                                                                class="lazy" alt="testi2" width="62"
-                                                                                height="62" loading="lazy"></div>
-                                                                        <div class="testi-card-body">
-                                                                            <p class="para">Working with Mamo 
-                                                                                Technologies has been an absolute
-                                                                                game-changer for Emtel Fintech. Their
-                                                                                cutting-edge technological solutions
-                                                                                have acted as catalyst to reach new
-                                                                                heights in the payments space for Emtel
-                                                                                and in Mauritius. Their expertise has
-                                                                                been instrumental in the development
-                                                                                of our payment App - blink, in improving
-                                                                                our customer experiences, and
-                                                                                driving overall business growth. Mamo 
-                                                                                Technologies has been a reliable and
-                                                                                innovative partner.</p>
-                                                                        </div>
-                                                                    </div><!-- 1 -->
-                                                                </div>
-                                                                <div class="item">
-                                                                    <div class="testi-card"
-                                                                        data-bs-target="#testimonial-modal7"
-                                                                        data-bs-toggle="modal">
-                                                                        <div class="testi-card-head"><img
-                                                                                data-src="/themes/custom/Mamo _subtheme/images/testimonial/testi7.svg"
-                                                                                class="lazy" alt="testi1" width="62"
-                                                                                height="62" loading="lazy"></div>
-                                                                        <div class="testi-card-body">
-                                                                            <p class="para">Working with Mamo  has been
-                                                                                transformative, with their
-                                                                                remarkable ability to collaboratively
-                                                                                explore diverse approaches and
-                                                                                overcome challenges contributing
-                                                                                significantly to Kotak's success. Their
-                                                                                innovative mindset and proactive
-                                                                                approach have proven instrumental in
-                                                                                navigating complexities and finding
-                                                                                unique solutions. Choosing Mamo  as our
-                                                                                partner has been strategic, with their
-                                                                                commitment to excellence and seamless
-                                                                                translation of ideas into reality
-                                                                                setting them apart in the industry.</p>
-                                                                        </div>
-                                                                    </div><!-- 1 -->
-                                                                </div>
-                                                                <div class="item">
-                                                                    <div class="testi-card"
-                                                                        data-bs-target="#testimonial-modal8"
-                                                                        data-bs-toggle="modal">
-                                                                        <div class="testi-card-head"><img
-                                                                                data-src="/themes/custom/Mamo _subtheme/images/testimonial/testi8.svg"
-                                                                                class="lazy" alt="testi2" width="62"
-                                                                                height="62" loading="lazy"></div>
-                                                                        <div class="testi-card-body">
-                                                                            <p class="para">Mamo  exemplifies
-                                                                                innovation, consistently offering easy
-                                                                                solutions to complex problems. Their
-                                                                                team's dedication to excellence and
-                                                                                seamless collaboration showcases
-                                                                                remarkable teamwork. Working with Mamo 
-                                                                                has been a testament to their innovative
-                                                                                approach, making them an invaluable
-                                                                                partner for tackling challenges
-                                                                                efficiently.</p>
-                                                                        </div>
-                                                                    </div>
-                                                                </div>
-                                                            </div>
-                                                            <div class="progress custom-progress" role="progressbar"
-                                                                aria-valuemin="0" aria-valuemax="100">
-                                                                 </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </section><!-- testimonial-modal -->
-                                    <div class="modal fade testimonial-modal" id="testimonial-modal1"
-                                        data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
-                                        aria-labelledby="testimonial-modalLabel" aria-hidden="true">
-                                        <div class="modal-dialog modal-dialog-centered">
-                                            <div class="modal-content">
-                                                <div class="testi-card"><a class="btn-close-a" href="#"
-                                                        data-bs-dismiss="modal" aria-label="Close"><img
-                                                            class="close-modal" src="images/close-modal.svg"
-                                                            alt="close-modal" width="32" height="32" loading="lazy"></a>
-                                                    <div class="testi-card-head"><img
-                                                            data-src="/themes/custom/Mamo _subtheme/images/testimonial/testi1.svg"
-                                                            class="lazy" alt="testi1" width="62" height="62"
-                                                            loading="lazy"></div>
-                                                    <div class="testi-card-body">
-                                                        <p class="para"><span class="company-name">Chrp Technologies
-                                                                Inc.  </span><br>Mamo  has been
-                                                            an exceptional partner to me and my companies over the many
-                                                            years we've been a partner. From
-                                                            initial conceptual design to hardcore innovation development
-                                                            and testing, to scaling a
-                                                            cost-effective technology organization, Mamo  is an
-                                                            exceptional firm.</p>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div><!-- testimonial-modal -->
-                                    <div class="modal fade testimonial-modal" id="testimonial-modal2"
-                                        data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
-                                        aria-labelledby="testimonial-modalLabel" aria-hidden="true">
-                                        <div class="modal-dialog modal-dialog-centered">
-                                            <div class="modal-content">
-                                                <div class="testi-card"><a class="btn-close-a" href="#"
-                                                        data-bs-dismiss="modal" aria-label="Close"><img
-                                                            class="close-modal" src="images/close-modal.svg"
-                                                            alt="close-modal" width="32" height="32" loading="lazy"></a>
-                                                    <div class="testi-card-head"><img
-                                                            data-src="/themes/custom/Mamo _subtheme/images/testimonial/testi2.svg"
-                                                            class="lazy" alt="testi1" width="62" height="62"
-                                                            loading="lazy"></div>
-                                                    <div class="testi-card-body">
-                                                        <p class="para"><span class="company-name">Steadfast
-                                                                Labs </span><br>Working with Mamo  has
-                                                            been an outstanding experience for our software needs. The
-                                                            team consistently accommodates our
-                                                            timelines and goes above and beyond to surpass our
-                                                            expectations. They have delivered a fantastic
-                                                            software package that enhances our business operations. I
-                                                            highly recommend Mamo  for their
-                                                            exceptional service and solutions.</p>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div><!-- testimonial-modal -->
-                                    <div class="modal fade testimonial-modal" id="testimonial-modal3"
-                                        data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
-                                        aria-labelledby="testimonial-modalLabel" aria-hidden="true">
-                                        <div class="modal-dialog modal-dialog-centered">
-                                            <div class="modal-content">
-                                                <div class="testi-card"><a class="btn-close-a" href="#"
-                                                        data-bs-dismiss="modal" aria-label="Close"><img
-                                                            class="close-modal" src="images/close-modal.svg"
-                                                            alt="close-modal" width="32" height="32" loading="lazy"></a>
-                                                    <div class="testi-card-head"><img
-                                                            data-src="/themes/custom/Mamo _subtheme/images/testimonial/testi3.svg"
-                                                            class="lazy" alt="testi1" width="62" height="62"
-                                                            loading="lazy"></div>
-                                                    <div class="testi-card-body">
-                                                        <p class="para"><span class="company-name">Momentum
-                                                                Multiply </span><br>We faced the challenge
-                                                            of finding the right talent with the right skills at the
-                                                            right price, a task crucial for
-                                                            executing Momentum's vision at the required speed and scale.
-                                                            That's why we turned to our
-                                                            strategic partner, Mamo  , they played a pivotal role in
-                                                            our journey. Our partnership has been
-                                                            collaborative and fruitful, and we value their expertise and
-                                                            support, knowing they can scale up
-                                                            our team when needed.</p>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div><!-- testimonial-modal -->
-                                    <div class="modal fade testimonial-modal" id="testimonial-modal4"
-                                        data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
-                                        aria-labelledby="testimonial-modalLabel" aria-hidden="true">
-                                        <div class="modal-dialog modal-dialog-centered">
-                                            <div class="modal-content">
-                                                <div class="testi-card"><a class="btn-close-a" href="#"
-                                                        data-bs-dismiss="modal" aria-label="Close"><img
-                                                            class="close-modal" src="images/close-modal.svg"
-                                                            alt="close-modal" width="32" height="32" loading="lazy"></a>
-                                                    <div class="testi-card-head"><img
-                                                            data-src="/themes/custom/Mamo _subtheme/images/testimonial/testi4.svg"
-                                                            class="lazy" alt="testi1" width="62" height="62"
-                                                            loading="lazy"></div>
-                                                    <div class="testi-card-body">
-                                                        <p class="para"><span class="company-name">RAM </span><br>Mamo 
-                                                            upgraded our legacy software,
-                                                            enhancing operational efficiency and innovation. Their
-                                                            seamless integration of modern technology
-                                                            and meticulous data migration resulted in improved
-                                                            performance and scalability.</p>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div><!-- testimonial-modal -->
-                                    <div class="modal fade testimonial-modal" id="testimonial-modal5"
-                                        data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
-                                        aria-labelledby="testimonial-modalLabel" aria-hidden="true">
-                                        <div class="modal-dialog modal-dialog-centered">
-                                            <div class="modal-content">
-                                                <div class="testi-card"><a class="btn-close-a" href="#"
-                                                        data-bs-dismiss="modal" aria-label="Close"><img
-                                                            class="close-modal" src="images/close-modal.svg"
-                                                            alt="close-modal" width="32" height="32" loading="lazy"></a>
-                                                    <div class="testi-card-head"><img
-                                                            data-src="/themes/custom/Mamo _subtheme/images/testimonial/testi5.svg"
-                                                            class="lazy" alt="testi1" width="62" height="62"
-                                                            loading="lazy"></div>
-                                                    <div class="testi-card-body">
-                                                        <p class="para"><span class="company-name">Utkarsh Small Finance
-                                                                Bank </span><br>When we were
-                                                            looking for a good partner to digitize the operations of
-                                                            Utkarsh Small Finance Bank; Mamo  as a
-                                                            technology partner helped us with their consultancy, UX and
-                                                            agile development methods for
-                                                            meeting our business requirements and delivery in our
-                                                            digital transformation initiatives. They
-                                                            have demonstrated a strong understanding of technology,
-                                                            governance and collaboration between the
-                                                            teams.</p>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div><!-- testimonial-modal -->
-                                    <div class="modal fade testimonial-modal" id="testimonial-modal6"
-                                        data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
-                                        aria-labelledby="testimonial-modalLabel" aria-hidden="true">
-                                        <div class="modal-dialog modal-dialog-centered">
-                                            <div class="modal-content">
-                                                <div class="testi-card"><a class="btn-close-a" href="#"
-                                                        data-bs-dismiss="modal" aria-label="Close"><img
-                                                            class="close-modal" src="images/close-modal.svg"
-                                                            alt="close-modal" width="32" height="32" loading="lazy"></a>
-                                                    <div class="testi-card-head"><img
-                                                            data-src="/themes/custom/Mamo _subtheme/images/testimonial/testi6.svg"
-                                                            class="lazy" alt="testi1" width="62" height="62"
-                                                            loading="lazy"></div>
-                                                    <div class="testi-card-body">
-                                                        <p class="para"><span class="company-name">Emtel
-                                                                 </span><br>Working with Mamo  Technologies
-                                                            has been an absolute game-changer for Emtel Fintech. Their
-                                                            cutting-edge technological solutions
-                                                            have acted as catalyst to reach new heights in the payments
-                                                            space for Emtel and in Mauritius.
-                                                            Their expertise has been instrumental in the development of
-                                                            our payment App - blink, in
-                                                            improving our customer experiences, and driving overall
-                                                            business growth. Mamo  Technologies has
-                                                            been a reliable and innovative partner.</p>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div><!-- testimonial-modal -->
-                                    <div class="modal fade testimonial-modal" id="testimonial-modal7"
-                                        data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
-                                        aria-labelledby="testimonial-modalLabel" aria-hidden="true">
-                                        <div class="modal-dialog modal-dialog-centered">
-                                            <div class="modal-content">
-                                                <div class="testi-card"><a class="btn-close-a" href="#"
-                                                        data-bs-dismiss="modal" aria-label="Close"><img
-                                                            class="close-modal" src="images/close-modal.svg"
-                                                            alt="close-modal" width="32" height="32" loading="lazy"></a>
-                                                    <div class="testi-card-head"><img
-                                                            data-src="/themes/custom/Mamo _subtheme/images/testimonial/testi7.svg"
-                                                            class="lazy" alt="testi1" width="62" height="62"
-                                                            loading="lazy"></div>
-                                                    <div class="testi-card-body">
-                                                        <p class="para"><span class="company-name">Kotak life
-                                                                 </span><br>Working with Mamo  has been
-                                                            transformative, with their remarkable ability to
-                                                            collaboratively explore diverse approaches and
-                                                            overcome challenges contributing significantly to Kotak's
-                                                            success. Their innovative mindset and
-                                                            proactive approach have proven instrumental in navigating
-                                                            complexities and finding unique
-                                                            solutions. Choosing Mamo  as our partner has been
-                                                            strategic, with their commitment to
-                                                            excellence and seamless translation of ideas into reality
-                                                            setting them apart in the industry.
-                                                        </p>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div><!-- testimonial-modal -->
-                                    <div class="modal fade testimonial-modal" id="testimonial-modal8"
-                                        data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
-                                        aria-labelledby="testimonial-modalLabel" aria-hidden="true">
-                                        <div class="modal-dialog modal-dialog-centered">
-                                            <div class="modal-content">
-                                                <div class="testi-card"><a class="btn-close-a" href="#"
-                                                        data-bs-dismiss="modal" aria-label="Close"><img
-                                                            class="close-modal" src="images/close-modal.svg"
-                                                            alt="close-modal" width="32" height="32" loading="lazy"></a>
-                                                    <div class="testi-card-head"><img
-                                                            data-src="/themes/custom/Mamo _subtheme/images/testimonial/testi8.svg"
-                                                            class="lazy" alt="testi1" width="62" height="62"
-                                                            loading="lazy"></div>
-                                                    <div class="testi-card-body">
-                                                        <p class="para"><span
-                                                                class="company-name">SIDBI </span><br>Mamo  exemplifies
-                                                            innovation,
-                                                            consistently offering easy solutions to complex problems.
-                                                            Their team's dedication to excellence
-                                                            and seamless collaboration showcases remarkable teamwork.
-                                                            Working with Mamo  has been a
-                                                            testament to their innovative approach, making them an
-                                                            invaluable partner for tackling
-                                                            challenges efficiently.</p>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-
-                            </div>
-                            <div id="block-Mamo -subtheme-homepageeight"
-                                class="block block-block-content block-block-contente104932f-408b-4d7d-a72f-43e20982f776">
+  <div class="home6-integration-section mb-5">
 
 
 
-                                <div>
-                                    <section class="common-section common-stack-sect">
-                                        <div class="container slick-container-xs-p0">
-                                            <div class="row">
-                                                <div class="col-sm-12">
-                                                    <div class="show-tab-dekstop hide-mobile hide-tab">
-                                                        <div class="stack-outer">
-                                                            <div class="stack1-img-outer" data-aos="fade-up"
-                                                                data-aos-delay="300"
-                                                                data-aos-anchor=".common-stack-sect"><img
-                                                                    class="stack-img stack1-img lazy"
-                                                                    data-src="images/stack1.png"
-                                                                    alt="stack1" width="1282" height="140"
-                                                                    loading="lazy">
-                                                                <p class="para stack1-para1">Users worldwide</p>
-                                                            </div>
-                                                            <div class="stack2-img-outer" data-aos="fade-up"
-                                                                data-aos-delay="600"
-                                                                data-aos-anchor=".common-stack-sect">
-                                                                <p class="para stack2-para1">Building a world where the
-                                                                    impact of technology goes beyond the
-                                                                    screen, touching the lives of people everywhere</p>
-                                                                <img class="stack-img stack2-img lazy"
-                                                                    data-src="images/stack2.png"
-                                                                    alt="stack2" width="587" height="141"
-                                                                    loading="lazy">
-                                                                <p class="para stack2-para2">Years of excellence</p>
-                                                            </div>
-                                                            <div class="stack3-img-outer" data-aos="fade-up"
-                                                                data-aos-delay="900"
-                                                                data-aos-anchor=".common-stack-sect"><img
-                                                                    class="stack-img stack3-img lazy"
-                                                                    data-src="images/stack3.png"
-                                                                    alt="stack3" width="1280" height="140"
-                                                                    loading="lazy">
-                                                                <p class="para stack3-para1"><span
-                                                                        class="ui-provider a b c d e f g h i j k l m n o p q r s t u v w x y z ab ac ae af ag ah ai aj ak"
-                                                                        dir="ltr">Countries with transformative
-                                                                        stories</span></p>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                    <div class="hide-tab-dekstop show-mobile show-tab">
-                                                        <div class="stack-outer">
-                                                            <div class="stack1-img-outer" data-aos="fade-up"
-                                                                data-aos-delay="300"
-                                                                data-aos-anchor=".common-stack-sect">
-                                                                <p class="para stack2-para1">Building a world where the
-                                                                    impact of technology goes beyond the
-                                                                    screen, touching the lives of people everywhere</p>
-                                                                <img class="stack-img stack1-img-xs lazy"
-                                                                    data-src="images/stack1-xs.png"
-                                                                    alt="stack1" width="390" height="77" loading="lazy">
-                                                                <p class="para stack1-para1">
-                                                                    <meta charset="utf-8"><span
-                                                                        style="white-space:pre-wrap;">Users
-                                                                        worldwide</span>
-                                                                </p>
-                                                            </div>
-                                                            <div class="stack2-img-outer" data-aos="fade-up"
-                                                                data-aos-delay="600"
-                                                                data-aos-anchor=".common-stack-sect"><img
-                                                                    class="stack-img stack2-img-xs lazy"
-                                                                    data-src="images/stack2-xs.png"
-                                                                    alt="stack1" width="390" height="78" loading="lazy">
-                                                                <p class="para stack2-para2">Years of excellence</p>
-                                                            </div>
-                                                            <div class="stack3-img-outer" data-aos="fade-up"
-                                                                data-aos-delay="900"
-                                                                data-aos-anchor=".common-stack-sect"><img
-                                                                    class="stack-img stack3-img-xs lazy"
-                                                                    data-src="images/stack3-xs.png"
-                                                                    alt="stack1" width="390" height="78" loading="lazy">
-                                                                <p class="para stack3-para1">
-                                                                    <meta charset="utf-8"><span
-                                                                        style="white-space:pre-wrap;">Countries with
-                                                                        transformative
-                                                                        stories</span>
-                                                                </p>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </section>
-                                </div>
-
-                            </div>
-                            <div id="block-Mamo -subtheme-homepagenine"
-                                class="block block-block-content block-block-contentc5a203f4-2f23-40af-95f9-750ab083dfaa">
+    <div class="container">
 
 
 
-                                <div>
-                                    <section class="common-section common-home-sect8">
-                                        <div class="container slick-container-xs-p0">
-                                            <div class="row">
-                                                <div class="col-sm-12">
-                                                    <div class="common-sect-para text-center" data-aos="fade-up"
-                                                        data-aos-delay="300" data-aos-anchor=".common-home-sect8">
-                                                        <h2>Basking in <span class="text-gradient1">the Glow</span></h2>
-                                                    </div>
-                                                </div>
-                                                <div class="col-sm-12">
-                                                    <div class="hide-mobile show-desktop">
-                                                        <div class="card-outer-group">
-                                                            <div class="card-outer" data-aos="custom-in"
-                                                                data-aos-delay="600"
-                                                                data-aos-anchor=".common-home-sect8"
-                                                                data-aos-offset="550"><img class="lazy card1"
-                                                                    data-src="images/card1.svg"
-                                                                    alt="card1" width="247" height="234" loading="lazy">
-                                                                <img class="lazy card2"
-                                                                    data-src="images/card2.svg"
-                                                                    alt="card2" width="245" height="244" loading="lazy">
-                                                                <img class="lazy card3"
-                                                                    data-src="images/card3.svg"
-                                                                    alt="card3" width="246" height="249" loading="lazy">
-                                                                <img class="lazy card4"
-                                                                    data-src="images/card4.svg"
-                                                                    alt="card4" width="247" height="249" loading="lazy">
-                                                                <img class="lazy card5"
-                                                                    data-src="images/card5.svg"
-                                                                    alt="card5" width="247" height="249" loading="lazy">
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                    <div class="show-mobile hide-desktop" data-aos="custom-in"
-                                                        data-aos-delay="600" data-aos-anchor=".common-home-sect8"
-                                                        data-aos-offset="500">
-                                                        <div class="slick-slider slick-slider-progress">
-                                                            <div class="slick-carousel-award slick-slider-common">
-                                                                <div class="item"><img class="lazy card1 award-card"
-                                                                        data-src="/themes/custom/Mamo _subtheme/images/card/card1.svg"
-                                                                        alt="card1" width="247" height="234"
-                                                                        loading="lazy"></div>
-                                                                <div class="item"><img class="lazy card2 award-card"
-                                                                        data-src="/themes/custom/Mamo _subtheme/images/card/card2.svg"
-                                                                        alt="card2" width="245" height="244"
-                                                                        loading="lazy"></div>
-                                                                <div class="item"><img class="lazy card3 award-card"
-                                                                        data-src="/themes/custom/Mamo _subtheme/images/card/card3.svg"
-                                                                        alt="card3" width="246" height="249"
-                                                                        loading="lazy"></div>
-                                                                <div class="item"><img class="lazy card4 award-card"
-                                                                        data-src="/themes/custom/Mamo _subtheme/images/card/card4.svg"
-                                                                        alt="card4" width="247" height="249"
-                                                                        loading="lazy"></div>
-                                                                <div class="item"><img class="lazy card5 award-card"
-                                                                        data-src="/themes/custom/Mamo _subtheme/images/card/card5.svg"
-                                                                        alt="card5" width="247" height="249"
-                                                                        loading="lazy"></div>
-                                                            </div>
-                                                            <div class="progress custom-progress" role="progressbar"
-                                                                aria-valuemin="0" aria-valuemax="100">
-                                                                 </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </section><a class="go-to-top-wrap hiring-top-wrap st active"
-                                        style="background-color:transparent;height:auto;width:auto;"
-                                        href="careers-life-at-Mamo.html #contact-form-sect"><img
-                                            src="images/icon-hiring.svg" alt="Hiring Now" width="72" height="72"
-                                            loading="lazy"></a>
-                                </div>
-
-                            </div>
-                            <article data-history-node-id="1">
+      <div class="row justify-content-center mb-65 wow animate fadeInDown" data-wow-delay="200ms"
+        data-wow-duration="1500ms" style="
 
 
 
+            visibility: visible;
 
 
-                                <div>
 
-                                </div>
+            animation-duration: 1500ms;
 
-                            </article>
+
+
+            animation-delay: 200ms;
+
+
+
+          ">
+
+
+
+        <div class="col-xxl-6 col-lg-6 col-md-8">
+
+
+
+          <div class="section-title text-center">
+
+
+
+            <h2>Partners & Integrations </h2>
+
+
+
+          </div>
+
+
+
+        </div>
+
+
+
+      </div>
+
+
+
+      <div class="row mb-50">
+
+
+
+        <div class="col-lg-12">
+
+
+
+          <div class="company-logo">
+
+
+
+            <img decoding="async" src="images/nethority-favicon.svg" alt="company-logo">
+
+
+
+          </div>
+
+
+
+          <div class="arrow-vec-wrap">
+
+
+
+            <svg class="awrrow-vec" height="125" viewBox="0 0 1102 125" xmlns="http://www.w3.org/2000/svg">
+
+
+
+              <path id="theMo1tionPath1" d="M551 0V14C551 30.5685 537.569 44 521 44H31C21.5 44.5 3.5 53 3 72V124">
+              </path>
+
+
+
+              <path d="M6 120H0L3 125L6 120Z"></path>
+
+
+
+              <circle cx="0" cy="0" r="2.5" class="sm-circle2">
+
+
+
+                <animateMotion dur="4s" begin="0s" fill="freeze" repeatCount="indefinite" rotate="">
+
+
+
+                  <mpath xlink:href="#theMo1tionPath1"></mpath>
+
+
+
+                </animateMotion>
+
+
+
+              </circle>
+
+
+
+              <path id="theMo1tionPath2"
+                d="M551 0V14C551 30.5685 537.569 44 521 44H180C172 44 163 50.2 163 59C163 67.8 163 104.333 163 124">
+              </path>
+
+
+
+              <path d="M166 120H160L163 125L166 120Z"></path>
+
+
+
+              <circle cx="0" cy="0" r="2.5" class="sm-circle2">
+
+
+
+                <animateMotion dur="4s" begin="0s" fill="freeze" repeatCount="indefinite" rotate="">
+
+
+
+                  <mpath xlink:href="#theMo1tionPath2"></mpath>
+
+
+
+                </animateMotion>
+
+
+
+              </circle>
+
+
+
+              <path id="theMo1tionPath3"
+                d="M551 0V14C551 30.5685 564.431 44 581 44H922C930 44 939 50.2 939 59C939 67.8 939 104.333 939 124">
+              </path>
+
+
+
+              <path d="M936 120H942L939 125L936 120Z"></path>
+
+
+
+              <circle cx="0" cy="0" r="2.5" class="sm-circle2">
+
+
+
+                <animateMotion dur="4s" begin="0s" fill="freeze" repeatCount="indefinite" rotate="">
+
+
+
+                  <mpath xlink:href="#theMo1tionPath3"></mpath>
+
+
+
+                </animateMotion>
+
+
+
+              </circle>
+
+
+
+              <path id="theMo1tionPath4"
+                d="M551 0V14C551 30.5685 564.431 44 581 44H1071C1080.5 44.5 1098.5 53 1099 72V124"></path>
+
+
+
+              <path d="M1096 120H1102L1099 125L1096 120Z"></path>
+
+
+
+              <circle cx="0" cy="0" r="2.5" class="sm-circle2">
+
+
+
+                <animateMotion dur="4s" begin="0s" fill="freeze" repeatCount="indefinite" rotate="">
+
+
+
+                  <mpath xlink:href="#theMo1tionPath4"></mpath>
+
+
+
+                </animateMotion>
+
+
+
+              </circle>
+
+
+
+            </svg>
+
+
+
+          </div>
+
+
+
+          <div class="row justify-content-center">
+
+
+
+            <div class="col-lg-12">
+
+
+
+              <div class="integration-wrap">
+
+
+
+                <div class="single-integration">
+
+
+
+                  <img decoding="async" src="images/Shopify.svg" alt="content-logo">
+
+
+
+                  <h6>Shopify</h6>
+
+
+
+                </div>
+
+
+
+                <div class="single-integration">
+
+
+
+                  <img decoding="async" src="images/WooCommerce.svg" alt="content-logo">
+
+
+
+                  <h6>WooCommerce</h6>
+
+
+
+                </div>
+
+
+
+                <div class="single-integration">
+
+
+
+                  <img decoding="async" src="images/Klaviyo-2.svg" alt="content-logo">
+
+
+
+                  <h6>Klaviyo</h6>
+
+
+
+                </div>
+
+
+
+                <div class="single-integration">
+
+
+
+                  <img decoding="async" src="images/Meta.svg" alt="content-logo">
+
+
+
+                  <h6>Meta</h6>
+
+
+
+                </div>
+
+
+
+                <div class="single-integration">
+
+
+
+                  <img decoding="async" src="images/google.svg" alt="content-logo">
+
+
+
+                  <h6>Google</h6>
+
+
+
+                </div>
+
+
+
+                <div class="single-integration">
+
+
+
+                  <img decoding="async" src="images/GA4.svg" alt="content-logo">
+
+
+
+                  <h6>GA4</h6>
+
+
+
+                </div>
+
+
+
+                <div class="single-integration">
+
+
+
+                  <img decoding="async" src="images/Gorgias-1.svg" alt="content-logo">
+
+
+
+                  <h6>Gorgias</h6>
+
+
+
+                </div>
+
+
+
+                <div class="single-integration">
+
+
+
+                  <img decoding="async" src="images/WhatsApp-1.svg" alt="content-logo">
+
+
+
+                  <h6>WhatsApp</h6>
+
+
+
+                </div>
+
+
+
+                <div class="single-integration">
+
+
+
+                  <img decoding="async" src="images/Razorpay-1.svg" alt="content-logo">
+
+
+
+                  <h6>Razorpay</h6>
+
+
+
+                </div>
+
+
+
+                <div class="single-integration">
+
+
+
+                  <img decoding="async" src="images/Easyship.svg" alt="content-logo">
+
+
+
+                  <h6>Easyship</h6>
+
+
+
+                </div>
+
+
+
+                <div class="single-integration">
+
+
+
+                  <img decoding="async" src="images/OpenAI-1.svg" alt="content-logo">
+
+
+
+                  <h6>OpenAI</h6>
+
+
+
+                </div>
+
+
+
+              </div>
+
+
+
+            </div>
+
+
+
+          </div>
+
+
+
+        </div>
+
+
+
+      </div>
+
+
+
+      <div class="row">
+
+
+
+        <div class="col-lg-12 d-flex justify-content-center">
+          <a href="#" target="_blank" rel="nofollow" class="view-all-btn">
+            <svg width="10" height="10" viewBox="0 0 10 10" xmlns="http://www.w3.org/2000/svg">
+              <path d="M1 9L9 1M9 1C7.22222 1.33333 3.33333 2 1 1M9 1C8.66667 2.66667 8 6.33333 9 9" stroke-width="1.5"
+                stroke-linecap="round"></path>
+            </svg>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+                            
 
                         </div>
 
