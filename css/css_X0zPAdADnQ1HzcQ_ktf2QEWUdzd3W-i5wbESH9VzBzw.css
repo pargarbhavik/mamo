@@ -816,3 +816,267 @@ button:hover .circle .icon.arrow {
 button:hover .button-text {
  color: #fff;
 }
+.store-whatsapp {
+position: fixed; /* Keeps the button in a fixed position on the screen */
+z-index: 9998; /* Ensures the button is above other elements */
+right: 310px; /* Positions the button 20px from the right-hand side of the screen */
+bottom: 1px; /* Positions the button 10px from the bottom of the screen */
+display: flex; /* Uses Flexbox for the internal button layout */
+align-items: centre; /* Centres the content (icon) vertically */
+justify-content: center; /* Centers the content (icon) horizontally */
+padding: 24px; /* Internal spacing around the icon */
+border-radius: 50%; /* Makes the button circular */
+background: #25D366 !important; /* Background colour of the button */
+box-shadow: 0 0 20px transparent; /* Soft shadow around the button */
+color: #25D366 !important; /* Icon colour */
+font-size: 40px; /* Size of the icon inside the button */
+line-height: 47px; /* Line height for text/icon */
+text-align: center; /* Alignment of the text/icon */
+text-decoration: none; /* Removes any text decoration from the link */
+}
+
+.store-whatsapp:hover {
+background: #128C7E !important; /* Background color on mouseover */
+box-shadow: 0 0 20px rgb(75 57 75 / 50%); /* Shadow more prominent on mouseover */
+color: #128C7E !important; /* Mouse-over icon color */
+}
+/* From Uiverse.io by Gaurang7717 */ 
+.Btn {
+  width: 45px;
+  height: 45px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  background-color: transparent;
+  position: relative;
+  /* overflow: hidden; */
+  border-radius: 7px;
+  cursor: pointer;
+  transition: all 0.3s;
+  
+}
+
+.svgContainer {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: transparent;
+  backdrop-filter: blur(4px);
+  letter-spacing: 0.8px;
+  border-radius: 10px;
+  transition: all 0.3s;
+  border: 1px solid rgba(156, 156, 156, 0.466);
+}
+
+.BG {
+  position: absolute;
+  content: "";
+  width: 100%;
+  height: 100%;
+  background: #00d757;
+  background: #00d757;
+  background: #00d757;
+  background: #00d757;
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f09433', endColorstr='#bc1888',GradientType=1 );
+  z-index: -1;
+  border-radius: 9px;
+  pointer-events: none;
+  transition: all 0.3s;
+}
+
+.Btn:hover .BG {
+  transform: rotate(35deg);
+  transform-origin: bottom;
+}
+
+.Btn:hover .svgContainer {
+  background-color: rgba(156, 156, 156, 0.466);
+}
+/* stats*/
+/* ===== Space above the whole title section ===== */
+.commen-title-heading {
+  margin-top: 150px;   /* increase top space */
+  margin-bottom: 30px; /* reduce space before stats */
+}
+
+/* ===== Reduce paragraph bottom gap ===== */
+.commen-title-heading p {
+  margin-bottom: 20px;
+}
+
+/* ===== Reduce space before stats box ===== */
+.stats-section {
+  margin-top: 20px !important;  /* pulls stats closer */
+}
+
+/* ===== Title Wrapper ===== */
+.commen-title-heading {
+  max-width: 900px;
+  margin: 0 auto 60px;
+  text-align: center;
+}
+
+/* ===== Heading ===== */
+.commen-title-heading h2 {
+  font-size: 44px;
+  font-weight: 700;
+  color: #0a0a0a;
+  margin-bottom: 18px;
+  line-height: 1.2;
+  position: relative;
+}
+
+/* ===== Underline Accent */
+.commen-title-heading h2::after {
+  content: "";
+  width: 80px;
+  height: 4px;
+  background: #0b57ff;
+  display: block;
+  margin: 18px auto 0;
+  border-radius: 5px;
+}
+
+/* ===== Paragraph */
+.commen-title-heading p {
+  font-size: 17px;
+  line-height: 1.7;
+  color: #444;
+  margin: 20px auto 0;
+}
+
+/* ===== Highlight text */
+.commen-title-heading p b {
+  color: #0b57ff;
+  font-weight: 600;
+}
+
+/* ===== Responsive */
+@media (max-width: 768px) {
+  .commen-title-heading h2 {
+    font-size: 34px;
+  }
+
+  .commen-title-heading p {
+    font-size: 16px;
+  }
+}
+
+/* ===== Stats Section Wrapper ===== */
+.stats-section {
+  max-width: 1200px;
+  margin: 80px auto;
+  padding: 60px 40px;
+  background: #eef5ff;
+  border-radius: 40px;
+  border: 1px solid #8fb6ff;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 50px 40px;
+  position: relative;
+}
+
+/* ===== Stat Box ===== */
+.stat-box {
+  text-align: center;
+  padding: 10px 30px;
+  position: relative;
+}
+
+/* ===== Vertical Line ===== */
+.stat-box::after {
+  content: "";
+  position: absolute;
+  right: -20px;
+  top: 20%;
+  height: 60%;
+  width: 1px;
+  background: #2f6fff;
+}
+
+/* Remove last column line */
+.stat-box:nth-child(3n)::after {
+  display: none;
+}
+
+/* ===== Value ===== */
+.stat-value {
+  font-size: 64px;
+  font-weight: 700;
+  color: #0b57ff;
+  margin-bottom: 10px;
+}
+
+/* ===== Text ===== */
+.stat-text {
+  font-size: 16px;
+  line-height: 1.5;
+  color: #222;
+}
+/* ================= Hover Animations ================= */
+
+.stat-box {
+  transition: transform 0.35s ease, box-shadow 0.35s ease, background 0.35s ease;
+  border-radius: 18px;
+}
+
+/* Card lift */
+.stat-box:hover {
+  transform: translateY(-10px) scale(1.03);
+  background: rgba(255, 255, 255, 0.65);
+  box-shadow: 0 18px 40px rgba(11, 87, 255, 0.18);
+}
+
+/* Number pop */
+.stat-value {
+  transition: transform 0.35s ease, letter-spacing 0.35s ease;
+}
+
+.stat-box:hover .stat-value {
+  transform: scale(1.12);
+  letter-spacing: 1px;
+}
+
+/* Text color shift */
+.stat-text {
+  transition: color 0.35s ease;
+}
+
+.stat-box:hover .stat-text {
+  color: #0b57ff;
+}
+
+/* Divider smooth */
+.stat-box::after {
+  transition: background 0.35s ease, height 0.35s ease;
+}
+
+.stat-box:hover::after {
+  height: 75%;
+  background: linear-gradient(to bottom, #0b57ff, transparent);
+}
+
+
+/* ===== Responsive ===== */
+@media (max-width: 900px) {
+  .stats-section {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .stat-box:nth-child(2n)::after {
+    display: none;
+  }
+}
+
+@media (max-width: 550px) {
+  .stats-section {
+    grid-template-columns: 1fr;
+  }
+
+  .stat-box::after {
+    display: none;
+  }
+}
