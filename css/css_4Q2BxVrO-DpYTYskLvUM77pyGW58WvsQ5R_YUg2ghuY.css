@@ -12484,9 +12484,9 @@ a.text-dark:hover {
         content: " (" attr(title) ")"
     }
 
-    pre {
+    /*pre {
         white-space: pre-wrap !important
-    }
+    }*/
 
     blockquote,
     pre {
@@ -23541,7 +23541,7 @@ img.global-bg {
 }
 
 .common-client-sect .u-marquee-outer {
-    padding: 68px 0
+    padding: 14px 0
 }
 
 @media screen and (max-width:767px) {
