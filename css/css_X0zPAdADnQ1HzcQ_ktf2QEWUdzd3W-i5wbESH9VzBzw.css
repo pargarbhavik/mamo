@@ -1237,6 +1237,26 @@ h2 {
 /*=====================================
   65. Home7 Portfolio Section CSS
 ========================================*/
+/*image hover animation*/
+/* Smooth transition */
+.portfolio-card2 .portfolio-img img {
+  transition: transform 0.5s ease;
+}
+
+/* On hover trigger animation */
+.portfolio-card2:hover .portfolio-img img {
+  animation: hoverShake 0.8s ease-in-out;
+}
+
+/* Keyframes for shake */
+@keyframes hoverShake {
+  0%   { transform: translate(0, 0) scale(1); }
+  20%  { transform: translate(-4px, 2px) scale(1.02); }
+  40%  { transform: translate(4px, -2px) scale(1.03); }
+  60%  { transform: translate(-3px, 2px) scale(1.02); }
+  80%  { transform: translate(3px, -1px) scale(1.02); }
+  100% { transform: translate(0, 0) scale(1.03); }
+}
 .home7-portfolio-section {
   background-color: #F0F0F0;
   padding: 110px 0;
