@@ -511,7 +511,7 @@ template {
   gap: 14px;
   list-style: none;
   padding: 12px;
-  background: #f7f7f7;
+  background: #fff;
   border-radius: 60px;
   margin-bottom: 50px;
 }
@@ -755,7 +755,7 @@ button.learn-more .circle {
  margin: 0;
  width: 3rem;
  height: 3rem;
- background: #66d57a;
+ background: linear-gradient(90deg, #35F729, #78E588, #2CD73A, #03C0C7);
  border-radius: 1.625rem;
 }
 
@@ -826,9 +826,9 @@ align-items: centre; /* Centres the content (icon) vertically */
 justify-content: center; /* Centers the content (icon) horizontally */
 padding: 24px; /* Internal spacing around the icon */
 border-radius: 50%; /* Makes the button circular */
-background: #25D366 !important; /* Background colour of the button */
+background:linear-gradient(90deg, #35F729, #78E588, #2CD73A, #03C0C7);/* Background colour of the button */
 box-shadow: 0 0 20px transparent; /* Soft shadow around the button */
-color: #25D366 !important; /* Icon colour */
+color:linear-gradient(90deg, #35F729, #78E588, #2CD73A, #03C0C7);/* Icon colour */
 font-size: 40px; /* Size of the icon inside the button */
 line-height: 47px; /* Line height for text/icon */
 text-align: center; /* Alignment of the text/icon */
@@ -856,7 +856,7 @@ color: #128C7E !important; /* Mouse-over icon color */
   display: inline-flex;
   align-items: center;
 }
-
+/*
 .svgContainer {
   width: 100%;
   height: 100%;
@@ -870,7 +870,7 @@ color: #128C7E !important; /* Mouse-over icon color */
   transition: all 0.3s;
   border: 1px solid rgba(156, 156, 156, 0.466);
 }
-
+*/
 .BG {
   position: absolute;
   content: "";
@@ -893,7 +893,7 @@ color: #128C7E !important; /* Mouse-over icon color */
 }
 
 .Btn:hover .svgContainer {
-  background-color: rgba(156, 156, 156, 0.466);
+  background-color: linear-gradient(90deg, #35F729, #78E588, #2CD73A, #03C0C7);
 }
 /* stats*/
 /* ===== Space above the whole title section ===== */
@@ -934,7 +934,7 @@ color: #128C7E !important; /* Mouse-over icon color */
   content: "";
   width: 80px;
   height: 4px;
-  background: #0b57ff;
+  background: linear-gradient(90deg, #35F729, #78E588, #2CD73A, #03C0C7);
   display: block;
   margin: 18px auto 0;
   border-radius: 5px;
@@ -950,9 +950,20 @@ color: #128C7E !important; /* Mouse-over icon color */
 
 /* ===== Highlight text */
 .commen-title-heading p b {
-  color: #0b57ff;
+  color: linear-gradient(90deg, #35F729, #78E588, #2CD73A, #03C0C7);
   font-weight: 600;
 }
+/*numbers highlight*/
+.stat-value {
+  font-size: 48px;
+  font-weight: 600; /* keep normal weight */
+  background: linear-gradient(90deg, #1E8F3A, #3C7F5A, #1F7A3C, #0A6A6F);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  text-shadow: 0 0 12px rgba(53, 247, 41, 0.35);
+}
+
 
 /* ===== Responsive */
 @media (max-width: 768px) {
@@ -970,9 +981,9 @@ color: #128C7E !important; /* Mouse-over icon color */
   max-width: 1200px;
   margin: 80px auto;
   padding: 60px 40px;
-  background: #eef5ff;
+  background: linear-gradient(90deg, #C9FFD0, #ECFBF0, #D2FFE0, #CFF6F7);
   border-radius: 40px;
-  border: 1px solid #8fb6ff;
+  border: 1px solidlinear-gradient(90deg, #35F729, #78E588, #2CD73A, #03C0C7);
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 50px 40px;
@@ -986,6 +997,23 @@ color: #128C7E !important; /* Mouse-over icon color */
   position: relative;
 }
 
+/*highlited text*/
+.gradient-text {
+  background: linear-gradient(90deg, #35F729, #78E588, #2CD73A, #03C0C7);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  font-weight: 700;
+  background-size: 200% auto;
+  animation: shine 4s linear infinite;
+}
+
+@keyframes shine {
+  to {
+    background-position: 200% center;
+  }
+}
+
 /* ===== Vertical Line ===== */
 .stat-box::after {
   content: "";
@@ -994,7 +1022,7 @@ color: #128C7E !important; /* Mouse-over icon color */
   top: 20%;
   height: 60%;
   width: 1px;
-  background: #2f6fff;
+  background: grey;
 }
 
 /* Remove last column line */
@@ -1006,7 +1034,7 @@ color: #128C7E !important; /* Mouse-over icon color */
 .stat-value {
   font-size: 64px;
   font-weight: 700;
-  color: #0b57ff;
+  color:  linear-gradient(90deg, #1E8F3A, #3C7F5A, #1F7A3C, #0A6A6F);
   margin-bottom: 10px;
 }
 
@@ -1014,7 +1042,7 @@ color: #128C7E !important; /* Mouse-over icon color */
 .stat-text {
   font-size: 16px;
   line-height: 1.5;
-  color: #222;
+  color:linear-gradient(90deg, #35F729, #78E588, #2CD73A, #03C0C7);
 }
 /* ================= Hover Animations ================= */
 
@@ -1027,7 +1055,7 @@ color: #128C7E !important; /* Mouse-over icon color */
 .stat-box:hover {
   transform: translateY(-10px) scale(1.03);
   background: rgba(255, 255, 255, 0.65);
-  box-shadow: 0 18px 40px rgba(11, 87, 255, 0.18);
+  box-shadow: 0 18px 40px linear-gradient(90deg, #35F729, #78E588, #2CD73A, #03C0C7);
 }
 
 /* Number pop */
@@ -1046,7 +1074,7 @@ color: #128C7E !important; /* Mouse-over icon color */
 }
 
 .stat-box:hover .stat-text {
-  color: #0b57ff;
+  color:linear-gradient(90deg, #35F729, #78E588, #2CD73A, #03C0C7);
 }
 
 /* Divider smooth */
@@ -1056,7 +1084,7 @@ color: #128C7E !important; /* Mouse-over icon color */
 
 .stat-box:hover::after {
   height: 75%;
-  background: linear-gradient(to bottom, #0b57ff, transparent);
+  background: linear-gradient(to bottom, linear-gradient(90deg, #35F729, #78E588, #2CD73A, #03C0C7);, transparent);
 }
 
 
@@ -1759,4 +1787,732 @@ h2 {
 /* Fallback plus sign */
 .portfolio-card2 .portfolio-img .details-btn-wrap .icon i::before {
     content: '+';
+}
+/* =====================================================
+   PORTFOLIO BUTTON SECTION – FULL CSS
+===================================================== */
+
+.pf-section-wrap {
+  position: relative;
+  width: 100%;
+  padding: 120px 20px;
+
+  /* Real background image */
+  background-image: url("../images/back.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.pf-overlay-layer {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.55);
+  z-index: 1;
+}
+
+.pf-inner-content {
+  position: relative;
+  z-index: 2;
+  max-width: 900px;
+  margin: auto;
+  text-align: center;
+  color: #ffffff;
+}
+
+.pf-title-text {
+  font-size: 42px;
+  font-weight: 800;
+  margin-bottom: 14px;
+  letter-spacing: -0.5px;
+}
+
+.pf-desc-text {
+  font-size: 16px;
+  color: #000000;
+  max-width: 620px;
+  margin: 0 auto 38px;
+  line-height: 1.6;
+}
+/* =====================================================
+   RESPONSIVE
+===================================================== */
+
+@media (max-width: 768px) {
+  .pf-section-wrap {
+    padding: 90px 16px;
+  }
+
+  .pf-title-text {
+    font-size: 32px;
+  }
+
+  /*.pf-desc-text {
+    font-size: 15px;
+  }*/
+}
+/* From Uiverse.io by ilkhoeri */ 
+.button {
+  --h-button: 48px;
+  --w-button: 102px;
+  --round: 0.75rem;
+  cursor: pointer;
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  transition: all 0.25s ease;
+  background: radial-gradient(
+  100% 75% at 55%,
+  #7BFF6ACC 0%,
+  #B6F2C199 35%,
+  #78F58A66 65%,
+  #6FE4E800 100%
+),
+     linear-gradient(90deg, #3FC94E, #7EC697, #46C96C, #2FB7BD);
+  border-radius: var(--round);
+  border: none;
+  outline: none;
+  padding: 12px 18px;
+}
+.button::before,
+.button::after {
+  content: "";
+  position: absolute;
+  inset: var(--space);
+  transition: all 0.5s ease-in-out;
+  border-radius: calc(var(--round) - var(--space));
+  z-index: 0;
+}
+.button::before {
+  --space: 1px;
+  background: linear-gradient(
+    177.95deg,
+    rgba(255, 255, 255, 0.19) 0%,
+    rgba(255, 255, 255, 0) 100%
+  );
+}
+.button::after {
+  --space: 2px;
+  background: radial-gradient(
+  100% 75% at 55%,
+  #7BFF6ACC 0%,
+  #B6F2C199 35%,
+  #78F58A66 65%,
+  #6FE4E800 100%
+),
+     linear-gradient(90deg, #3FC94E, #7EC697, #46C96C, #2FB7BD);
+}
+.button:active {
+  transform: scale(0.95);
+}
+
+.fold {
+  z-index: 1;
+  position: absolute;
+  top: 0;
+  right: 0;
+  height: 1rem;
+  width: 1rem;
+  display: inline-block;
+  transition: all 0.5s ease-in-out;
+  background: radial-gradient(
+  100% 75% at 55%,
+  #7BFF6ACC 0%,
+  #B6F2C199 35%,
+  #78F58A66 65%,
+  #6FE4E800 100%
+);
+  box-shadow: 0 0 3px black;
+  border-bottom-left-radius: 0.5rem;
+  border-top-right-radius: var(--round);
+}
+.fold::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 150%;
+  height: 150%;
+  transform: rotate(45deg) translateX(0%) translateY(-18px);
+  background-color: #e8e8e8;
+  pointer-events: none;
+}
+.button:hover .fold {
+  margin-top: -1rem;
+  margin-right: -1rem;
+}
+
+.points_wrapper {
+  overflow: hidden;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  position: absolute;
+  z-index: 1;
+}
+
+.points_wrapper .point {
+  bottom: -10px;
+  position: absolute;
+  animation: floating-points infinite ease-in-out;
+  pointer-events: none;
+  width: 2px;
+  height: 2px;
+  background-color: #fff;
+  border-radius: 9999px;
+}
+@keyframes floating-points {
+  0% {
+    transform: translateY(0);
+  }
+  85% {
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(-55px);
+    opacity: 0;
+  }
+}
+.points_wrapper .point:nth-child(1) {
+  left: 10%;
+  opacity: 1;
+  animation-duration: 2.35s;
+  animation-delay: 0.2s;
+}
+.points_wrapper .point:nth-child(2) {
+  left: 30%;
+  opacity: 0.7;
+  animation-duration: 2.5s;
+  animation-delay: 0.5s;
+}
+.points_wrapper .point:nth-child(3) {
+  left: 25%;
+  opacity: 0.8;
+  animation-duration: 2.2s;
+  animation-delay: 0.1s;
+}
+.points_wrapper .point:nth-child(4) {
+  left: 44%;
+  opacity: 0.6;
+  animation-duration: 2.05s;
+}
+.points_wrapper .point:nth-child(5) {
+  left: 50%;
+  opacity: 1;
+  animation-duration: 1.9s;
+}
+.points_wrapper .point:nth-child(6) {
+  left: 75%;
+  opacity: 0.5;
+  animation-duration: 1.5s;
+  animation-delay: 1.5s;
+}
+.points_wrapper .point:nth-child(7) {
+  left: 88%;
+  opacity: 0.9;
+  animation-duration: 2.2s;
+  animation-delay: 0.2s;
+}
+.points_wrapper .point:nth-child(8) {
+  left: 58%;
+  opacity: 0.8;
+  animation-duration: 2.25s;
+  animation-delay: 0.2s;
+}
+.points_wrapper .point:nth-child(9) {
+  left: 98%;
+  opacity: 0.6;
+  animation-duration: 2.6s;
+  animation-delay: 0.1s;
+}
+.points_wrapper .point:nth-child(10) {
+  left: 65%;
+  opacity: 1;
+  animation-duration: 2.5s;
+  animation-delay: 0.2s;
+}
+
+.inner {
+  z-index: 2;
+  gap: 6px;
+  position: relative;
+  width: 100%;
+  color: white;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 1.5;
+  transition: color 0.2s ease-in-out;
+}
+
+.inner svg.icon {
+  width: 18px;
+  height: 18px;
+  transition: fill 0.1s linear;
+}
+
+.button:focus svg.icon {
+  fill: white;
+}
+.button:hover svg.icon {
+  fill: transparent;
+  animation:
+    dasharray 1s linear forwards,
+    filled 0.1s linear forwards 0.95s;
+}
+@keyframes dasharray {
+  from {
+    stroke-dasharray: 0 0 0 0;
+  }
+  to {
+    stroke-dasharray: 68 68 0 0;
+  }
+}
+@keyframes filled {
+  to {
+    fill: white;
+  }
+}
+
+/* From Uiverse.io by MuhammadHasann 
+.bbb {
+  position: relative;
+  padding: 13px 35px;
+  background:  linear-gradient(90deg, #9AFF8E, #CFF6D8, #9BF7A8, #8DECEF);
+  font-size: 17px;
+  font-weight: 900;
+  color: #181818;
+  border: none;
+  border-radius: 8px;
+  box-shadow: 2px 2px 5px #18181869, inset 2px 2px 10px #ffffffb0;
+  transition: all .3s ease-in-out;
+}
+
+.icon-111 {
+  position: absolute;
+  top: 10%;
+  left: 50%;
+  transform: translate(-50%, 0);
+  width: 0px;
+  height: auto;
+  transition: all .5s ease-in-out;
+  z-index: -1;
+}
+
+.icon-222 {
+  position: absolute;
+  top: 10%;
+  left: 50%;
+  transform: translate(-50%, 0);
+  width: 0px;
+  height: auto;
+  transition: all .5s ease-in-out;
+  z-index: -2;
+}
+
+.icon-333 {
+  position: absolute;
+  top: 10%;
+  left: 50%;
+  transform: translate(-50%, 0);
+  width: 0px;
+  height: auto;
+  transition: all .5s ease-in-out;
+  z-index: -2;
+}
+
+.icon-444 {
+  position: absolute;
+  top: 10%;
+  left: 50%;
+  transform: translate(-50%, 0);
+  width: 0px;
+  height: auto;
+  transition: all .5s ease-in-out;
+  z-index: -2;
+}
+
+.icon-555 {
+  position: absolute;
+  top: 10%;
+  left: 50%;
+  transform: translate(-50%, 0);
+  width: 0px;
+  height: auto;
+  transition: all .5s ease-in-out;
+  z-index: -2;
+}
+
+.bbb:hover {
+  padding: 13px 25px;
+  border-radius: 8px 8px 24px 24px;
+}
+
+.bbb:hover .icon-111 {
+  top: -250%;
+  left: 50%;
+  transform: translate(-50%, 0);
+  width: 50px;
+  height: auto;
+  animation: inIcon1 1s ease .45s forwards;
+}
+
+@keyframes inIcon1 {
+  0% {
+    transform-origin: 0 100%;
+    transform: translate(-50%, 0) rotate(0deg);
+  }
+
+  25% {
+    transform-origin: 0 100%;
+    transform: translate(-50%, 0) rotate(5deg);
+  }
+
+  50% {
+    transform-origin: 0 100%;
+    transform: translate(-50%, 0) rotate(1deg);
+  }
+
+  65% {
+    transform-origin: 0 100%;
+    transform: translate(-50%, 0) rotate(3deg);
+  }
+
+  100% {
+    transform-origin: 0 100%;
+    transform: translate(-50%, 0) rotate(0deg);
+  }
+}
+
+.bbb:hover .icon-222 {
+  position: absolute;
+  top: -200%;
+  left: 90%;
+  transform: translate(-50%, 0);
+  width: 75px;
+  height: auto;
+  animation: inIcon2 1s ease .45s forwards;
+}
+
+@keyframes inIcon2 {
+  0% {
+    transform-origin: 0 100%;
+    transform: translate(-50%, 0) rotate(0deg);
+  }
+
+  35% {
+    transform-origin: 0 100%;
+    transform: translate(-50%, 0) rotate(10deg);
+  }
+
+  50% {
+    transform-origin: 0 100%;
+    transform: translate(-50%, 0) rotate(4deg);
+  }
+
+  80% {
+    transform-origin: 0 100%;
+    transform: translate(-50%, 0) rotate(5deg);
+  }
+
+  100% {
+    transform-origin: 0 100%;
+    transform: translate(-50%, 0) rotate(0deg);
+  }
+}
+
+.bbb:hover .icon-333 {
+  position: absolute;
+  top: -130%;
+  left: 20%;
+  transform: translate(-50%, 0);
+  width: 60px;
+  height: auto;
+  animation: inIcon3 1s ease .45s forwards;
+}
+
+@keyframes inIcon3 {
+  0% {
+    transform-origin: 0 100%;
+    transform: translate(-50%, 0) rotate(0deg);
+  }
+
+  35% {
+    transform-origin: 0 100%;
+    transform: translate(-50%, 0) rotate(-2deg);
+  }
+
+  100% {
+    transform-origin: 0 100%;
+    transform: translate(-50%, 0) rotate(0deg);
+  }
+}
+
+.bbb:hover .icon-444 {
+  position: absolute;
+  top: -300%;
+  left: 10%;
+  transform: translate(-50%, 0);
+  width: 85px;
+  height: auto;
+  animation: inIcon4 1s ease .45s forwards;
+}
+
+@keyframes inIcon4 {
+  0% {
+    transform-origin: 0 100%;
+    transform: translate(-50%, 0) rotate(0deg);
+  }
+
+  40% {
+    transform-origin: 0 100%;
+    transform: translate(-50%, 0) rotate(-3deg);
+  }
+
+  100% {
+    transform-origin: 0 100%;
+    transform: translate(-50%, 0) rotate(0deg);
+  }
+}
+
+.bbb:hover .icon-555 {
+  position: absolute;
+  top: -350%;
+  left: 90%;
+  transform: translate(-50%, 0);
+  width: 85px;
+  height: auto;
+  animation: inIcon5 1s ease .45s forwards;
+}
+
+@keyframes inIcon5 {
+  0% {
+    transform-origin: 0 100%;
+    transform: translate(-50%, 0) rotate(0deg);
+  }
+
+  35% {
+    transform-origin: 0 100%;
+    transform: translate(-50%, 0) rotate(-3deg);
+  }
+
+  100% {
+    transform-origin: 0 100%;
+    transform: translate(-50%, 0) rotate(0deg);
+  }
+}
+
+.fil-leaf-1 {
+  fill: #7B9B3A
+}
+
+.fil-leaf-2 {
+  fill: #556729;
+  fill-rule: nonzero
+}
+
+.fil-leaf-3 {
+  fill: #556729
+}
+
+.fil-leaf-4 {
+  fill: #3C4819
+}
+
+.fil-leaf-5 {
+  fill: #3C4819
+}*/
+/* From Uiverse.io by Gaurang7717 */ 
+.Btn {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  width: 45px;
+  height: 45px;
+  border: none;
+  border-radius: 50%;
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+  transition-duration: 0.3s;
+  box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.199);
+  background-color: rgb(55, 208, 55);
+}
+
+.sign {
+  width: 100%;
+  transition-duration: 0.3s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.sign svg {
+  width: 25px;
+}
+
+.sign svg path {
+  fill: white;
+}
+.text {
+  position: absolute;
+  right: 0%;
+  width: 0%;
+  opacity: 0;
+  color: white;
+  font-size: 1.2em;
+  font-weight: 600;
+  transition-duration: 0.3s;
+}
+
+.Btn:hover {
+  width: 150px;
+  border-radius: 40px;
+  transition-duration: 0.3s;
+}
+
+.Btn:hover .sign {
+  width: 30%;
+  transition-duration: 0.3s;
+  padding-left: 10px;
+}
+
+.Btn:hover .text {
+  opacity: 1;
+  width: 70%;
+  transition-duration: 0.3s;
+  padding-right: 10px;
+}
+.Btn:active {
+  transform: translate(2px, 2px);
+}
+/* From Uiverse.io by xueyuantan */ 
+.btop {
+  width: 9em;
+  height: 3em;
+  border-radius: 30em;
+  font-size: 15px;
+  font-family: inherit;
+  cursor: pointer;
+
+  position: relative;
+  overflow: hidden;
+
+  /* DEFAULT border gradient */
+  background:
+    linear-gradient(transparent, transparent) padding-box,
+    linear-gradient(90deg, #72d391, #00c6ff) border-box;
+
+  border: 2px solid transparent;
+  color: #000;
+  z-index: 0;
+  transition: color 0.3s ease, background 0.3s ease;
+}
+
+/* Hover fill */
+.btop::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: 30em;
+
+  /* HOVER gradient */
+  background-image: linear-gradient(
+    90deg,
+    #35F729,
+    #78E588,
+    #2CD73A,
+    #03C0C7
+  );
+
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.5s ease;
+  z-index: -1;
+}
+
+/* 🔥 MATCH BORDER TO HOVER GRADIENT */
+.btop:hover {
+  color: #fff;
+
+  background:
+    linear-gradient(transparent, transparent) padding-box,
+    linear-gradient(
+      90deg,
+      #35F729,
+      #78E588,
+      #2CD73A,
+      #03C0C7
+    ) border-box;
+}
+
+.btop:hover::before {
+  transform: scaleX(1);
+}
+
+
+
+
+.btoptop {
+  width: 9em;
+  height: 3em;
+  border-radius: 30em;
+  font-size: 15px;
+  font-family: inherit;
+  cursor: pointer;
+
+  position: relative;
+  overflow: hidden;
+
+  /* TRANSPARENT background + gradient border */
+  background:
+    linear-gradient(transparent, transparent) padding-box,
+    linear-gradient(
+      90deg,
+      #35F729,
+      #78E588,
+      #2CD73A,
+      #03C0C7
+    ) border-box;
+
+  border: 2px solid transparent;
+  color: #000;
+  z-index: 0;
+  transition: color 0.3s ease;
+}
+
+/* Hover fill layer */
+.btoptop::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: 30em;
+
+  /* SAME gradient as border */
+  background: linear-gradient(
+    90deg,
+    #35F729,
+    #78E588,
+    #2CD73A,
+    #03C0C7
+  );
+
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.45s ease;
+
+  z-index: -1;
+}
+
+/* Hover state */
+.btoptop:hover {
+  color: #fff;
+}
+
+.btoptop:hover::before {
+  transform: scaleX(1);
 }
