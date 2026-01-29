@@ -579,7 +579,7 @@ template {
 ================================ */
 
 .home6-integration-section {
-  padding: 90px 0 70px;
+  padding: 0px 0 70px;
   background: #fff;
   overflow: hidden;
 }
@@ -2390,6 +2390,7 @@ h2 {
 .Btn:active {
   transform: translate(2px, 2px);
 }
+/* contact us */
 /* From Uiverse.io by xueyuantan */ 
 .btop {
   width: 9em;
@@ -2453,9 +2454,7 @@ h2 {
 .btop:hover::before {
   transform: scaleX(1);
 }
-
-
-
+/* contact us upper */
 
 .btoptop {
   width: 9em;
