@@ -2635,3 +2635,69 @@ h2 {
 .btoptop:hover::before {
   transform: scaleX(1);
 }
+
+/*links*/
+.custom-dropdown {
+  position: relative;
+}
+
+.custom-dropdown-menu {
+  display: none;
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(15px);
+  transition: all 0.3s ease;
+}
+
+.custom-dropdown.open .custom-dropdown-menu {
+  display: block;
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+
+.custom-dropdown-toggle {
+  cursor: pointer;
+  user-select: none;
+}
+
+.custom-dropdown-toggle i {
+  margin-left: 6px;
+  transition: transform 0.3s ease;
+}
+
+.custom-dropdown.open .custom-dropdown-toggle i {
+  transform: rotate(180deg);
+}
+
+
+.mega-dropdown-menu {
+  width: 100%;
+  left: 0;
+  right: 0;
+  top: 100%;
+  border-radius: 14px;
+  padding: 30px 0;
+  margin-top: 12px;
+}
+
+.mega-dropdown > .dropdown-toggle::after {
+  display: none;
+}
+
+.dropdown-menu.show {
+  display: block;
+}
+
+
+.mobile-menu a {
+  cursor: pointer;
+  display: block;
+}
+
+.nav-list.collapse {
+  padding-left: 15px;
+}
+.nav-list.collapse.show {
+  display: block;
+}
