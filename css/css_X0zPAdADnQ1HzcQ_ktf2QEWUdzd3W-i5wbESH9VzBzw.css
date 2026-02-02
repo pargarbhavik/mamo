@@ -1277,6 +1277,7 @@ h2 {
   100% { transform: translate(0, 0) scale(1.03); }
 }
 
+
 .home7-portfolio-section {
   background-color: #fff;
   padding: 110px 0;
@@ -2701,3 +2702,8 @@ h2 {
 .nav-list.collapse.show {
   display: block;
 }
+
+
+
+
+
