@@ -688,7 +688,8 @@
                     <div class="col-xl-4 col-md-12">
                         <div class="page-banner-right-content">
                             <div class="wrap-image">
-                                <img src="images/favicon.ico" alt="image">
+                                <img src="https://www.google.com/url?sa=i&url=https%3A%2F%2Ftfgsolution.com%2Fcompany%2F&psig=AOvVaw3V6KTvh5pxOqCEXaqRXiAb&ust=1770117046568000&source=images&cd=vfe&opi=89978449&ved=0CBQQjRxqFwoTCODI4IPWupIDFQAAAAAdAAAAABAM" alt="image">
+                                 
                             </div>
                             <div class="wrap-content">
                                 <p>Transforming HR operations through innovative technology and expert guidance. We help businesses streamline processes, ensure compliance, and focus on growth.</p>
@@ -1663,18 +1664,92 @@
                                                 </div>
                                             </div>
                                         </div>
-                                        <p><a class="go-to-top-wrap hiring-top-wrap st"
-                                                style="background-color:transparent;height:auto;width:auto;"
-                                                href="careers-life-at-Mamo.html #contact-form-sect"><img
-                                                    src="images/icon-hiring.svg" alt="Hiring Now" width="72" height="72"
-                                                    loading="lazy"></a></p>
-                                        <p class="d-none"><a class="go-to-top-wrap hiring-top-wrap st"
-                                                href="careers-life-at-Mamo.html #contact-form-sect">Hiring Now</a><em><i
-                                                    class="ph ph-megaphone go-to-top st">  </i></em><a
-                                                class="go-to-top-wrap st"
-                                                style="background-color:transparent;height:auto;width:auto;"
-                                                href="#common-header-wrapper"><img src="images/icon-top.svg"
-                                                    alt="Go to top" width="72" height="72" loading="lazy"></a></p>
+                                        <!-- FLOATING BUTTON -->
+<div class="chat-fab" id="chatToggle">
+  <!-- Replace with your own icon if needed -->
+  <img src="https://cdn-icons-png.flaticon.com/512/4712/4712027.png" alt="Chatbot">
+</div>
+
+<!-- CHAT BOX -->
+<div class="chatbox" id="chatBox">
+  <div class="chat-header">CHAT BOT</div>
+
+  <div class="chat-body" id="chatBody">
+    <div class="bot-msg">
+      <img src="https://cdn-icons-png.flaticon.com/512/4712/4712027.png" class="avatar">
+      <div class="msg-bubble">
+        Hi there 👋 How can I help you?
+        <span class="time">15:50</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="chat-footer">
+    <input type="text" id="userInput" placeholder="Type message..." />
+    <button onclick="sendMessage()">SEND</button>
+  </div>
+</div>
+
+<script>
+/* TOGGLE CHAT */
+const chatToggle = document.getElementById("chatToggle");
+const chatBox = document.getElementById("chatBox");
+const chatBody = document.getElementById("chatBody");
+
+chatToggle.onclick = () => {
+  chatBox.style.display =
+    chatBox.style.display === "flex" ? "none" : "flex";
+};
+
+/* FIXED COMPANY QUESTIONS */
+const answers = {
+  "services": "We provide software development, UI/UX design, and digital transformation services.",
+  "contact": "You can contact us through the Contact Us page on our website.",
+  "location": "We are based in Vadodara, India.",
+  "careers": "Yes, we are hiring. Please visit our Careers page.",
+  "internship": "We offer internships for students and freshers.",
+  "about": "We are Mamo Technologies, delivering software excellence.",
+  "support": "Yes, we provide long-term support and maintenance."
+};
+
+function sendMessage(){
+  const input = document.getElementById("userInput");
+  const msg = input.value.trim();
+  if(!msg) return;
+
+  addMessage(msg, "user");
+  input.value = "";
+
+  setTimeout(() => {
+    const reply = getReply(msg);
+    addMessage(reply, "bot");
+  }, 700);
+}
+
+function getReply(msg){
+  msg = msg.toLowerCase();
+  for(let key in answers){
+    if(msg.includes(key)) return answers[key];
+  }
+  return "Please ask about our services, careers, contact details, or company info.";
+}
+
+function addMessage(text, type){
+  const div = document.createElement("div");
+  div.className = type === "user" ? "user-msg" : "bot-msg";
+
+  div.innerHTML = `
+    ${type === "bot" ? `<img src="https://cdn-icons-png.flaticon.com/512/4712/4712027.png" class="avatar">` : ""}
+    <div class="msg-bubble">
+      ${text}
+      <span class="time">${new Date().getHours()}:${String(new Date().getMinutes()).padStart(2,'0')}</span>
+    </div>
+  `;
+
+  chatBody.appendChild(div);
+  chatBody.scrollTop = chatBody.scrollHeight;
+}
+</script>
                                     </div>
                                 </div>
                                 <div class="modal fade loader-modal" id="loader-modal" data-bs-backdrop="static"
