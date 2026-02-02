@@ -2917,7 +2917,7 @@ progress {
   display: block;
   width: 100%;
   padding: 0.375rem 0.75rem;
-  font-size: 1rem;
+  font-size: 1.2rem;
   font-weight: 400;
   line-height: 1.5;
   color: var(--bs-body-color);
@@ -14474,6 +14474,7 @@ Page Banner Area CSS
 .page-banner-right-content .wrap-image {
   text-align: end;
   margin-bottom: 100px;
+  margin-right: 80px;
 }
 .page-banner-right-content .wrap-content p {
   font-size: 20px;
@@ -19139,6 +19140,7 @@ Consulting Choose Area CSS
 }
 .consulting-choose-content img {
   border-radius: 15px;
+  margin-bottom: 20px;
 }
 
 .consulting-choose-items {
@@ -19156,7 +19158,7 @@ Consulting Choose Area CSS
 }
 .consulting-choose-items .item .icon i {
   display: flex;
-  font-size: 50px;
+  font-size: 30px;
   color: #78E588;
 }
 .consulting-choose-items .item h3, .consulting-choose-items .item .h3 {
@@ -19915,35 +19917,36 @@ Recruiting Contact Area CSS
   margin-top: 5px;
 }
 .recruiting-contact-information .offices-info .item.wrap2 {
-  background-color: #010101;
+  background-color: white;
   margin-top: 12px;
 }
 .recruiting-contact-information .offices-info .item.wrap2 h5, .recruiting-contact-information .offices-info .item.wrap2 .h5 {
-  color: #ffffff;
+  color: black;
 }
 .recruiting-contact-information .offices-info .item.wrap2 span {
   color: #959595;
 }
 
 .recruiting-contact-form {
-  background-color: #010101;
+  background-color: white;
   padding: 35px;
   border-radius: 15px;
+  border: 2px solid black;
 }
 .recruiting-contact-form .content {
   margin-bottom: 25px;
 }
 .recruiting-contact-form .content h3, .recruiting-contact-form .content .h3 {
   font-size: 23.5px;
-  color: #ffffff;
+  color: black;
   margin-bottom: 10px;
 }
 .recruiting-contact-form .content p {
   margin-bottom: 0;
-  color: #959595;
+  color: black;
 }
 .recruiting-contact-form .form-group label {
-  color: #959595;
+  color: black;
   display: block;
   line-height: 1;
   margin-bottom: 10px;
@@ -19953,7 +19956,7 @@ Recruiting Contact Area CSS
   height: 55px;
   border: 1px solid rgba(255, 255, 255, 0.1);
   background-color: rgba(255, 255, 255, 0.1);
-  color: #ffffff;
+  color: black;
   outline: 0;
   box-shadow: unset;
   padding: 10px 20px;
@@ -19961,7 +19964,9 @@ Recruiting Contact Area CSS
   transition: 0.7s;
 }
 .recruiting-contact-form .form-group .form-control::placeholder {
-  color: #959595;
+  border: 1px solid black;
+  border-radius: 5px;
+  color: grey;
   transition: 0.7s;
 }
 .recruiting-contact-form .form-group .form-control:focus::placeholder {
@@ -19975,6 +19980,7 @@ Recruiting Contact Area CSS
 .recruiting-contact-form .form-group .form-select {
   background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' fill='%23ffffff' viewBox='0 0 16 16'%3e%3cpath d='M3.204 5h9.592L8 10.481 3.204 5z'/%3e%3c/svg%3e");
   cursor: pointer;
+  border: 1px solid black;
 }
 .recruiting-contact-form .default-btn {
   background-color: #78E588;
@@ -22924,4 +22930,152 @@ Footer Area CSS
 
 .title-animation {
   text-align: left;
+}
+
+
+
+
+/* =========================
+   FLOATING CHAT BUTTON
+========================= */
+.chat-fab{
+  position:fixed;
+  bottom:30px;
+  right:30px;
+  width:64px;
+  height:64px;
+  border-radius:50%;
+  background: linear-gradient(90deg, #35F729, #78E588, #2CD73A, #03C0C7);
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  cursor:pointer;
+  z-index:9999;
+  animation: pulse 2.2s infinite;
+  box-shadow: 0 0 0 rgba(3,192,199,0.6);
+}
+
+.chat-fab img{
+  width:30px;
+  height:30px;
+}
+
+.chat-fab:hover{
+  transform: scale(1.1);
+  animation-play-state: paused;
+}
+
+/* Pulse animation */
+@keyframes pulse {
+  0% {
+    box-shadow: 0 0 0 0 rgba(3,192,199,0.6);
+    transform: scale(1);
+  }
+  70% {
+    box-shadow: 0 0 0 16px rgba(3,192,199,0);
+    transform: scale(1.05);
+  }
+  100% {
+    box-shadow: 0 0 0 0 rgba(3,192,199,0);
+    transform: scale(1);
+  }
+}
+
+/* =========================
+   CHAT BOX
+========================= */
+.chatbox{
+  position:fixed;
+  bottom:110px;
+  right:30px;
+  width:350px;
+  height:520px;
+  background:#fff;
+  border-radius:20px;
+  box-shadow:0 25px 50px rgba(0,0,0,.25);
+  display:none;
+  flex-direction:column;
+  overflow:hidden;
+  z-index:9999;
+}
+
+/* HEADER */
+.chat-header{
+  background: linear-gradient(90deg, #35F729, #78E588, #2CD73A, #03C0C7);
+  color:#fff;
+  padding:14px;
+  text-align:center;
+  font-weight:600;
+}
+
+/* BODY */
+.chat-body{
+  flex:1;
+  background:#f7f7fb;
+  padding:12px;
+  overflow-y:auto;
+}
+
+/* MESSAGES */
+.bot-msg, .user-msg{
+  display:flex;
+  margin-bottom:12px;
+}
+
+.avatar{
+  width:32px;
+  height:32px;
+  border-radius:50%;
+  margin-right:8px;
+}
+
+.msg-bubble{
+  background:#ececec;
+  padding:10px 14px;
+  border-radius:18px;
+  font-size:14px;
+  max-width:75%;
+  position:relative;
+}
+
+.user-msg{
+  justify-content:flex-end;
+}
+
+.user-msg .msg-bubble{
+  background: linear-gradient(90deg, #35F729, #78E588, #2CD73A, #03C0C7);
+  color:#fff;
+}
+
+.time{
+  display:block;
+  font-size:10px;
+  color:#666;
+  text-align:right;
+  margin-top:4px;
+}
+
+/* FOOTER */
+.chat-footer{
+  padding:10px;
+  border-top:1px solid #ddd;
+  display:flex;
+}
+
+.chat-footer input{
+  flex:1;
+  border:none;
+  outline:none;
+  padding:10px;
+  border-radius:20px;
+  background:#f1f1f1;
+}
+
+.chat-footer button{
+  border:none;
+  background:none;
+  color:#03C0C7;
+  font-weight:600;
+  margin-left:10px;
+  cursor:pointer;
 }

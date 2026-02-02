@@ -2701,3 +2701,155 @@ h2 {
 .nav-list.collapse.show {
   display: block;
 }
+<<<<<<< HEAD
+=======
+
+
+
+
+
+/* =========================
+   FLOATING CHAT BUTTON
+========================= */
+.chat-fab{
+  position:fixed;
+  bottom:30px;
+  right:30px;
+  width:64px;
+  height:64px;
+  border-radius:50%;
+  background: linear-gradient(90deg, #35F729, #78E588, #2CD73A, #03C0C7);
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  cursor:pointer;
+  z-index:9999;
+  animation: pulse 2.2s infinite;
+  box-shadow: 0 0 0 rgba(3,192,199,0.6);
+}
+
+.chat-fab img{
+  width:30px;
+  height:30px;
+}
+
+.chat-fab:hover{
+  transform: scale(1.1);
+  animation-play-state: paused;
+}
+
+/* Pulse animation */
+@keyframes pulse {
+  0% {
+    box-shadow: 0 0 0 0 rgba(3,192,199,0.6);
+    transform: scale(1);
+  }
+  70% {
+    box-shadow: 0 0 0 16px rgba(3,192,199,0);
+    transform: scale(1.05);
+  }
+  100% {
+    box-shadow: 0 0 0 0 rgba(3,192,199,0);
+    transform: scale(1);
+  }
+}
+
+/* =========================
+   CHAT BOX
+========================= */
+.chatbox{
+  position:fixed;
+  bottom:110px;
+  right:30px;
+  width:350px;
+  height:520px;
+  background:#fff;
+  border-radius:20px;
+  box-shadow:0 25px 50px rgba(0,0,0,.25);
+  display:none;
+  flex-direction:column;
+  overflow:hidden;
+  z-index:9999;
+}
+
+/* HEADER */
+.chat-header{
+  background: linear-gradient(90deg, #35F729, #78E588, #2CD73A, #03C0C7);
+  color:#fff;
+  padding:14px;
+  text-align:center;
+  font-weight:600;
+}
+
+/* BODY */
+.chat-body{
+  flex:1;
+  background:#f7f7fb;
+  padding:12px;
+  overflow-y:auto;
+}
+
+/* MESSAGES */
+.bot-msg, .user-msg{
+  display:flex;
+  margin-bottom:12px;
+}
+
+.avatar{
+  width:32px;
+  height:32px;
+  border-radius:50%;
+  margin-right:8px;
+}
+
+.msg-bubble{
+  background:#ececec;
+  padding:10px 14px;
+  border-radius:18px;
+  font-size:14px;
+  max-width:75%;
+  position:relative;
+}
+
+.user-msg{
+  justify-content:flex-end;
+}
+
+.user-msg .msg-bubble{
+  background: linear-gradient(90deg, #35F729, #78E588, #2CD73A, #03C0C7);
+  color:#fff;
+}
+
+.time{
+  display:block;
+  font-size:10px;
+  color:#666;
+  text-align:right;
+  margin-top:4px;
+}
+
+/* FOOTER */
+.chat-footer{
+  padding:10px;
+  border-top:1px solid #ddd;
+  display:flex;
+}
+
+.chat-footer input{
+  flex:1;
+  border:none;
+  outline:none;
+  padding:10px;
+  border-radius:20px;
+  background:#f1f1f1;
+}
+
+.chat-footer button{
+  border:none;
+  background:none;
+  color:#03C0C7;
+  font-weight:600;
+  margin-left:10px;
+  cursor:pointer;
+}
+>>>>>>> 64a5523efc0fec4625c0f921154dba7244226adc
