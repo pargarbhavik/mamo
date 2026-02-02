@@ -18828,7 +18828,7 @@ Widget Area CSS
   color: #78E588;
 }
 .widget-area .widget_about {
-  background-color: linear-gradient(90deg, #C9FFD0, #ECFBF0, #D2FFE0, #CFF6F7);
+  background-color: #78E588;
 }
 .widget-area .widget_about h3, .widget-area .widget_about .h3 {
   font-size: 20px;
