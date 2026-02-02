@@ -1277,6 +1277,7 @@ h2 {
   100% { transform: translate(0, 0) scale(1.03); }
 }
 
+
 .home7-portfolio-section {
   background-color: #fff;
   padding: 110px 0;
@@ -2701,8 +2702,6 @@ h2 {
 .nav-list.collapse.show {
   display: block;
 }
-<<<<<<< HEAD
-=======
 
 
 
@@ -2852,4 +2851,105 @@ h2 {
   margin-left:10px;
   cursor:pointer;
 }
->>>>>>> 64a5523efc0fec4625c0f921154dba7244226adc
+/* clients */
+.industry-title {
+  text-align: center;
+  font-weight: 700; /* bold */
+  font-size: 48px;  /* optional: make it bigger */
+}
+/*close*/
+
+/* why mamo section*/
+.why-choose-section {
+  margin-top: -20px;
+  padding: 90px 20px;
+  background: #fff;
+}
+
+.why-container {
+  max-width: 900px;
+  margin: auto;
+  text-align: center;
+}
+
+.why-title {
+  font-size: 38px;
+  font-weight: 800;
+  margin-bottom: 20px;
+  color: #111;
+}
+
+.why-desc {
+  font-size: 17px;
+  line-height: 1.8;
+  color: #111;
+  margin-bottom: 35px;
+  
+}
+
+
+.why-subtitle {
+  text-align: center;
+  font-size: 28px;
+  font-weight: 700;
+  margin-bottom: 30px;
+  color: #111;
+}
+
+/* Grid Layout */
+.why-list {
+  list-style: none;
+  padding: 0;
+  margin: 0 auto 25px;
+  max-width: 900px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 18px;
+}
+/* Card Style */
+.why-list li {
+  background: #ffffff;
+  padding: 22px 20px;
+  border-radius: 14px;
+  font-size: 16px;
+  font-weight: 500;
+  color: #333;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+
+/* Hover Effect */
+.why-list li:hover {
+  transform: translateY(-6px) scale(1.02);
+  box-shadow: 0 14px 30px rgba(0, 0, 0, 0.12);
+}
+
+/* Bottom Text */
+.why-note {
+  text-align: center;
+  font-size: 16px;
+  font-weight: 600;
+  margin-top: 25px;
+  color: #111;
+}
+
+.why-footer {
+  font-size: 16px;
+  font-weight: 600;
+  color: #111;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .why-title {
+    font-size: 30px;
+  }
+
+  .why-subtitle {
+    font-size: 22px;
+  }
+}
+/* ends the section mamo */
