@@ -1030,7 +1030,7 @@ h2 {
 .testimonials-title {
   font-family: sans-serif;
   text-align: center;
-  font-size: clamp(28px, 4vw, 36px);
+  font-size: 44px;
   font-weight: 700;
   letter-spacing: -0.02em;
   color: #020617;
@@ -1149,6 +1149,7 @@ h2 {
 .section-title3{
   font-family: sans-serif;
   margin-top: -30px;
+  font-size: 44px;
 }
 .section-title3 p {
   max-width: 520px;
@@ -1482,12 +1483,13 @@ h2 {
 /* 2. TYPOGRAPHY */
 .section-title3 h2 {
     flex: 0 0 100%; /* Title takes full width on top */
-    font-size: 75px; 
-    font-weight: 800; 
+    font-size: 60px; 
+    font-weight: 700; 
     line-height: 1.1;
     letter-spacing: -1.5px; 
     color: #1a1a1a; 
     margin-bottom: 30px;
+    font-family: sans-serif;
     text-transform: capitalize;
 }
 
@@ -3125,7 +3127,11 @@ ul {
 .flowx-title {
   font-family:  sans-serif;
   font-weight: bold;
+<<<<<<< Updated upstream
   font-size: 42px;
+=======
+  font-size: 44px;
+>>>>>>> Stashed changes
 
   margin-bottom: 70px;
   background: #111;
