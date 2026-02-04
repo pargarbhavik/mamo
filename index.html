@@ -4384,6 +4384,79 @@ function addMessage(text, type){
             </div>
         </div>
 
+
+
+        <!-- pop up form homepage -->
+
+        <div id="contactPopup">
+
+  <div class="modal-box">
+
+    <!-- LEFT SIDE -->
+    <div class="popup-left">
+      <!-- your company logo or illustration -->
+      <img src="images/favicon.ico" alt="Company Image">
+
+      <div class="left-text">
+        <h2>Get A Free Quote Now</h2>
+        <p>Please complete this form to be connected by one of our experts.</p>
+      </div>
+    </div>
+
+    <!-- RIGHT SIDE -->
+    <div class="popup-right">
+
+      <span class="close-btn" id="closeBtn">&times;</span>
+
+      <form id="contactForm">
+
+        <input type="text" placeholder="Name" required>
+        <input type="email" placeholder="Email Id" required>
+        <input type="text" placeholder="Phone Number" required>
+
+        <textarea placeholder="Enter Message" required></textarea>
+
+        <button type="submit">SUBMIT</button>
+
+      </form>
+
+    </div>
+
+  </div>
+
+</div>
+
+
+<script>
+  const popup = document.getElementById("contactPopup");
+  const closeBtn = document.getElementById("closeBtn");
+
+  window.addEventListener("load", function () {
+    popup.style.display = "flex";
+  });
+
+  closeBtn.addEventListener("click", function () {
+    popup.style.display = "none";
+  });
+
+  popup.addEventListener("click", function (e) {
+    if (e.target === popup) {
+      popup.style.display = "none";
+    }
+  });
+
+  document.getElementById("contactForm").addEventListener("submit", function(e){
+    e.preventDefault();
+    alert("Form submitted successfully (demo)");
+    popup.style.display = "none";
+  });
+</script>
+
+        <!-- end pop up form homepage -->
+
+
+
+
     </main>
     <script type="application/json"
         data-drupal-selector="drupal-settings-json">{"path":{"baseUrl":"\/","pathPrefix":"","currentPath":"node\/1","currentPathIsAdmin":false,"isFront":true,"currentLanguage":"en"},"pluralDelimiter":"\u0003","suppressDeprecationErrors":true,"clientside_validation_jquery":{"validate_all_ajax_forms":2,"force_validate_on_blur":false,"force_html5_validation":false,"messages":{"required":"This field is required.","remote":"Please fix this field.","email":"Please enter a valid email address.","url":"Please enter a valid URL.","date":"Please enter a valid date.","dateISO":"Please enter a valid date (ISO).","number":"Please enter a valid number.","digits":"Please enter only digits.","equalTo":"Please enter the same value again.","maxlength":"Please enter no more than {0} characters.","minlength":"Please enter at least {0} characters.","rangelength":"Please enter a value between {0} and {1} characters long.","range":"Please enter a value between {0} and {1}.","max":"Please enter a value less than or equal to {0}.","min":"Please enter a value greater than or equal to {0}.","step":"Please enter a multiple of {0}."}},"user":{"uid":0,"permissionsHash":"9582417dfe80a723cf846f43ffbed3652f88ffa08ae3527b795beeabfddfb78f"}}</script>

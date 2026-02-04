@@ -3252,3 +3252,258 @@ ul {
 
 /* Ends step bar */
 
+/* homepage popup css code below  */
+
+
+
+/*  POPUP OVERLAY */
+
+#contactPopup{
+  display:none;
+  position:fixed;
+  inset:0;
+  background:rgba(0,0,0,0.55);
+  align-items:center;
+  justify-content:center;
+  z-index:9999;
+
+  animation: popupFade .3s ease;
+}
+
+/* POPUP BOX */
+
+#contactPopup .modal-box{
+  background:#ffffff;
+  width:92%;
+  max-width:520px; 
+  padding:30px 28px;
+  border-radius:14px;
+  position:relative;
+  font-family: "Segoe UI", Arial, sans-serif;
+
+  box-shadow:0 20px 50px rgba(0,0,0,0.25);
+
+  transform: translateY(20px) scale(.95);
+  animation: popupBox .35s ease forwards;
+}
+
+
+#contactPopup .close-btn{
+  position:absolute;
+  top:12px;
+  right:12px;
+  font-size:22px;
+  cursor:pointer;
+  color:#333;
+  line-height:1;
+  z-index:5;
+}
+
+#contactPopup .close-btn:hover{
+  transform:scale(1.15);
+}
+
+#contactPopup h2{
+  text-align:center;
+  margin-bottom:18px;
+  color:#35F768;
+  font-weight:600;
+}
+
+#contactPopup .row{
+  display:flex;
+  gap:12px;
+}
+
+
+#contactPopup input,
+#contactPopup textarea{
+  width:100%;
+  padding:11px 12px;
+  margin-bottom:14px;
+  border:1.5px solid #cfe8d5;
+  border-radius:8px;
+  outline:none;
+  font-size:14px;
+  transition:border-color .2s ease, box-shadow .2s ease;
+}
+
+#contactPopup input::placeholder,
+#contactPopup textarea::placeholder{
+  color:#8aa79a;
+}
+
+#contactPopup input:focus,
+#contactPopup textarea:focus{
+  border-color:#2e7d32;
+  box-shadow:0 0 0 3px rgba(46,125,50,0.12);
+}
+
+
+#contactPopup textarea{
+  height:130px;
+  resize:none;
+}
+
+
+#contactPopup{
+  display:none;
+  position:fixed;
+  inset:0;
+  background:rgba(0,0,0,0.55);
+  align-items:center;
+  justify-content:center;
+  z-index:9999;
+}
+
+#contactPopup .modal-box{
+  width:95%;
+  max-width:900px;
+  background:#fff;
+  border-radius:16px;
+  overflow:hidden;
+  display:flex;
+  box-shadow:0 25px 60px rgba(0,0,0,.25);
+
+  animation: popupBox .35s ease forwards;
+  transform: translateY(20px) scale(.95);
+  font-family: "Segoe UI", Arial, sans-serif;
+}
+
+#contactPopup .popup-left{
+  width:45%;
+  background:white;
+  color:black;
+  padding:30px;
+  position:relative;
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+  gap:20px;
+  border-radius: 20px;
+}
+
+#contactPopup .popup-left img{
+  max-width:100%;
+  height:auto;
+  object-fit:contain;
+}
+
+#contactPopup .left-text h2{
+  font-size:28px;
+  margin-bottom:8px;
+  font-weight:600;
+  margin-right: 22px;
+}
+
+#contactPopup .left-text p{
+  font-size:15px;
+  line-height:1.5;
+  opacity:.95;
+}
+
+#contactPopup .popup-right{
+  width:55%;
+  padding:40px 35px;
+  position:relative;
+  background:#ffffff;
+}
+
+#contactPopup .close-btn{
+  position:absolute;
+  right:18px;
+  top:14px;
+  font-size:26px;
+  cursor:pointer;
+  color:#333;
+}
+
+#contactPopup input,
+#contactPopup textarea{
+  width:100%;
+  padding:12px 14px;
+  margin-bottom:16px;
+  border:1px solid #cfd6e0;
+  border-radius:6px;
+  outline:none;
+  font-size:15px;
+  transition:.2s;
+}
+
+#contactPopup input::placeholder,
+#contactPopup textarea::placeholder{
+  color:#6c7583;
+}
+
+#contactPopup input:focus,
+#contactPopup textarea:focus{
+  border-color:#2e7d32;
+  box-shadow:0 0 0 3px rgba(46,125,50,0.12);
+}
+
+#contactPopup textarea{
+  height:130px;
+  resize:none;
+}
+
+#contactPopup button{
+  float:none;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  gap:14px;
+
+  margin:10px auto 0;
+  padding:11px 33px;
+
+  background:#47e639;
+  color:white;
+
+  border:none;
+  border-radius:4px;
+
+  font-size:15px;
+  font-weight:600;
+  cursor:pointer;
+
+  transition:0.5s;
+  box-shadow:6px 6px 0 #000;
+  transform:skewX(-15deg);
+  position:relative;
+  overflow:hidden;
+}
+
+
+#contactPopup button:hover{
+  background:#35F729;
+  box-shadow:10px 10px 0 #03C0C7;
+}
+
+#contactPopup button span{
+  display:inline-block;
+  transform:skewX(15deg);
+  transition:0.3s;
+}
+
+#contactPopup button:hover span{
+  transform:skewX(15deg) translateX(4px);
+}
+
+@keyframes popupBox{
+  to{
+    transform:translateY(0) scale(1);
+  }
+}
+
+@media(max-width:800px){
+
+  #contactPopup .modal-box{
+    flex-direction:column;
+  }
+
+  #contactPopup .popup-left,
+  #contactPopup .popup-right{
+    width:100%;
+  }
+
+}
