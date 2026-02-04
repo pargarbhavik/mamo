@@ -15650,7 +15650,8 @@ a.back-btn .go-to-top-wrap em i.ph.ph-arrow-up.go-to-top,
 
 .common-header .common-header-ul {
     display: flex;
-    justify-content: center
+    justify-content: center;
+    margin-bottom: 20px;
 }
 
 .common-header .common-header-ul .dropdown-toggle::after {
@@ -15658,12 +15659,13 @@ a.back-btn .go-to-top-wrap em i.ph.ph-arrow-up.go-to-top,
 }
 
 .common-header .common-header-ul>li>a {
-    font-style: normal;
+    /* font-style: normal; */
     font-weight: 400;
     font-size: 16px;
     color: var(--Black1);
     padding: 10px 15px;
-    display: inline-block
+    display: inline-block;
+    margin-top: 20px;
 }
 
 .common-header .common-header-ul>li>a.show {
@@ -25554,7 +25556,7 @@ a.back-btn i,
 }
 
 .common-industries-sect .products-card::before {
-    content: "� " !important;
+    content: "  " !important;
     font: normal normal normal 1em/1 "Phosphor";
     color: inherit;
     flex-shrink: 0;
