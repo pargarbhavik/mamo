@@ -3507,3 +3507,309 @@ ul {
   }
 
 }
+/* ============================================================
+   GLOBAL RESPONSIVE ENHANCEMENTS FOR MOBILE & TABLET
+   (Non-destructive: only overrides / adds for small screens)
+============================================================ */
+
+/* Slightly relax max-widths on medium screens */
+@media (max-width: 1200px) {
+  .container,
+  .container1,
+  .container2 {
+    max-width: 100%;
+    padding-left: 24px;
+    padding-right: 24px;
+  }
+}
+
+/* Tablet and down */
+@media (max-width: 992px) {
+  /* Generic containers */
+  .container,
+  .container1,
+  .container2 {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+
+  /* Headings scale down */
+  .section-title h2,
+  .commen-title-heading h2,
+  .testimonials-title,
+  .industry-title,
+  .why-title,
+  .flowx-title {
+    font-size: 30px;
+  }
+
+  .section-title3 h2 {
+    font-size: 42px;
+  }
+
+  /* Stats section spacing */
+  .stats-section {
+    margin: 40px auto;
+    padding: 40px 24px;
+  }
+
+  /* Why choose layout padding */
+  .why-choose-section {
+    padding: 50px 16px;
+  }
+
+  /* Process / step bar */
+  .flowx-process-area {
+    padding: 60px 16px;
+  }
+
+  /* Portfolio header alignment on tablets */
+  .home7-portfolio-section .container3 {
+    padding-left: 24px;
+    padding-right: 24px;
+  }
+}
+
+/* Mobile first breakpoint */
+@media (max-width: 768px) {
+  /* Normalize body text readability */
+  body {
+    font-size: 15px;
+    line-height: 1.6;
+  }
+
+  .container,
+  .container1,
+  .container2 {
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+
+  /* Tabs navigation becomes scrollable row */
+  .tabs-nav {
+    justify-content: flex-start;
+    overflow-x: auto;
+    white-space: nowrap;
+    border-radius: 40px;
+  }
+
+  .tabs-nav li a {
+    padding: 10px 18px;
+    font-size: 14px;
+  }
+
+  /* Stats section single-column already handled; tighten padding */
+  .stats-section {
+    margin: 32px auto;
+    padding: 32px 16px;
+    border-radius: 28px;
+  }
+
+  .stat-value {
+    font-size: 40px;
+  }
+
+  .stat-text {
+    font-size: 14px;
+  }
+
+  /* Testimonials marquee cards a bit narrower for small screens */
+  .card {
+    width: 260px;
+    padding: 16px;
+  }
+
+  .card-text {
+    font-size: 14px;
+  }
+
+  /* Portfolio section padding */
+  .home7-portfolio-section {
+    padding: 60px 0;
+  }
+
+  .home7-portfolio-section .section-title3 h2 {
+    font-size: 36px;
+  }
+
+  .section-title3 p {
+    font-size: 15px;
+    line-height: 1.4;
+    margin: 10px 0;
+  }
+
+  /* Why choose cards spacing */
+  .why-list {
+    gap: 14px;
+  }
+
+  .why-list li {
+    padding: 18px 16px;
+  }
+
+  /* Process cards full-width stack (arrows hidden earlier for <=1100px) */
+  .flowx-card {
+    min-height: 0;
+    padding: 22px 18px;
+  }
+
+  /* Chat box more compact on mobile */
+  .chatbox {
+    width: 100%;
+    max-width: 100%;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height: 65vh;
+    border-radius: 20px 20px 0 0;
+  }
+
+  .chat-header {
+    padding: 12px;
+    font-size: 14px;
+  }
+
+  .chat-body {
+    padding: 10px;
+  }
+
+  .chat-footer input {
+    font-size: 13px;
+  }
+
+  /* Contact popup vertical layout improved on mobile */
+  #contactPopup .modal-box {
+    width: 100%;
+    max-width: 100%;
+    margin: 0 8px;
+    border-radius: 16px 16px 0 0;
+  }
+}
+
+/* Small mobile tweaks */
+@media (max-width: 576px) {
+  /* Main headings */
+  .section-title h2,
+  .commen-title-heading h2,
+  .testimonials-title,
+  .industry-title,
+  .why-title,
+  .flowx-title {
+    font-size: 24px;
+  }
+
+  .home7-portfolio-section .section-title3 h2 {
+    font-size: 30px;
+  }
+
+  .why-desc,
+  .commen-title-heading p {
+    font-size: 14px;
+  }
+
+  /* Reduce global paddings */
+  .why-choose-section,
+  .flowx-process-area,
+  .Tech-Stacks,
+  .home6-integration-section {
+    padding-left: 12px;
+    padding-right: 12px;
+  }
+
+  /* Floating WhatsApp button reposition & scale */
+  .store-whatsapp {
+    right: 16px;
+    bottom: 16px;
+    padding: 16px;
+    font-size: 28px;
+    line-height: 32px;
+  }
+
+  /* Floating chat button smaller and closer to edge */
+  .chat-fab {
+    bottom: 20px;
+    right: 20px;
+    width: 56px;
+    height: 56px;
+  }
+
+  .chat-fab img {
+    width: 26px;
+    height: 26px;
+  }
+
+  /* Social icon column (example-2) closer to edges & slightly smaller */
+  .example-2 {
+    left: 16px;
+    bottom: 20px;
+    row-gap: 10px;
+  }
+
+  .example-2 .icon-content a {
+    width: 46px;
+    height: 46px;
+  }
+
+  .example-2 .icon-content a svg {
+    width: 24px;
+    height: 24px;
+  }
+
+  .example-2 .icon-content .tooltip {
+    left: 56px;
+    font-size: 12px;
+    padding: 4px 8px;
+  }
+
+  /* Contact popup columns stack tighter (complements <=800px rules) */
+  #contactPopup .popup-left {
+    padding: 20px 18px;
+  }
+
+  #contactPopup .popup-right {
+    padding: 24px 18px 20px;
+  }
+
+  #contactPopup .left-text h2 {
+    font-size: 22px;
+  }
+
+  #contactPopup .left-text p {
+    font-size: 14px;
+  }
+
+  #contactPopup input,
+  #contactPopup textarea {
+    font-size: 14px;
+  }
+}
+
+/* Extra-small devices */
+@media (max-width: 420px) {
+  .tabs-nav {
+    padding: 8px 10px;
+    gap: 8px;
+  }
+
+  .tabs-nav li a {
+    padding: 8px 14px;
+    font-size: 13px;
+  }
+
+  .stats-section {
+    padding: 24px 14px;
+  }
+
+  .card {
+    width: 230px;
+  }
+
+  .why-title,
+  .flowx-title {
+    font-size: 22px;
+  }
+
+  .chatbox {
+    height: 60vh;
+  }
+}
