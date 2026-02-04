@@ -16705,6 +16705,7 @@ Outsourcing Services Area CSS
 }
 .outsourcing-services-area.wrap-style2 {
   background-color: transparent;
+  margin-bottom: -100px;
 }
 .outsourcing-services-area.wrap-style2 .section-title h2, .outsourcing-services-area.wrap-style2 .section-title .h2 {
   color: #010101;
