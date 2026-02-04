@@ -550,6 +550,8 @@ template {
 
 .tabs-wrapper img {
   max-width: 100%;
+  width: 100%;
+  height: auto;
   animation: floatIn .8s ease;
 }
 
@@ -1063,7 +1065,8 @@ h2 {
 .marquee-inner {
   display: inline-flex;
   white-space: nowrap;
-  animation: scroll 30s linear infinite;
+  /* Faster marquee speed */
+  animation: scroll 15s linear infinite;
 }
 
 .marquee.reverse .marquee-inner {
@@ -3504,6 +3507,12 @@ ul {
   #contactPopup .popup-left,
   #contactPopup .popup-right{
     width:100%;
+  }
+
+  /* Move close button slightly up/right on small screens so it doesn't overlap inputs */
+  #contactPopup .popup-right .close-btn{
+    top:6px;
+    right:10px;
   }
 
 }
