@@ -1153,7 +1153,7 @@ h2 {
 }
 .section-title3 p {
   max-width: 520px;
-  line-height:0.6;
+  line-height:1;
   font-size: 30px;
   color: #555;
 }
@@ -1497,12 +1497,12 @@ h2 {
 .section-title3:nth-child(2) {
     flex: 0 0 auto;
     max-width: 450px;
-    margin-left: 10%; /* Specific indentation from the left edge */
+    
 }
 
 .section-title3 p {
     font-size: 17px;
-    line-height: 0.6;
+    line-height: 1;
     color: #555;
     margin: 20px;
 }
