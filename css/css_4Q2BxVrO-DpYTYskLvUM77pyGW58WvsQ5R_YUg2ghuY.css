@@ -15164,7 +15164,12 @@ a:hover {
     color: var(--White);
     text-decoration: underline
 }
-
+.footer-link {
+  margin-top: 40px;
+}
+.footer-right {
+  padding-top: 40px;
+}
 .common-footer2 .footer-right {
     display: flex;
     justify-content: space-between
