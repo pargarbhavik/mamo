@@ -1041,14 +1041,14 @@ h2 {
 
 /* ---------------- MARQUEE ---------------- */
 
-.marquee-wrapper {
+.marquee-wrapper1 {
   position: relative;
   overflow: hidden;
   width: 100%;
   margin-bottom: 28px;
 }
 
-.marquee {
+.marquee1 {
   display: flex;
   width: 100%;
   
@@ -1063,15 +1063,16 @@ h2 {
   }
 }
 
-.marquee-inner {
+.marquee-inner1 {
   display: inline-flex;
   white-space: nowrap;
   /* Faster marquee speed */
-  animation: scroll 6s linear infinite !important;
+  animation: scroll 18s linear infinite ;
 }
 
-.marquee.reverse .marquee-inner {
+.marquee1.reverse1 .marquee-inner1 {
   animation-direction: reverse;
+  animation-duration: 18s;
 }
 
 /* ---------------- CARD ---------------- */
