@@ -3887,3 +3887,29 @@ ul {
   }
 
 }
+
+
+
+
+/* ===============================
+   Center wrap-image in mobile
+   =============================== */
+@media (max-width: 767px) {
+
+  .wrap-image {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+    text-align: center;
+  }
+
+  .wrap-image img {
+    display: block;
+    margin: 0 auto;
+    max-width: 90%;
+    height: auto;
+  }
+.wrap-image { width: 100%; }
+
+}
