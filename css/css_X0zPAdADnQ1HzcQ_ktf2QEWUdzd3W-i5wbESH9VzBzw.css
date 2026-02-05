@@ -1051,6 +1051,7 @@ h2 {
 .marquee {
   display: flex;
   width: 100%;
+  
 }
 
 @keyframes scroll {
@@ -1066,7 +1067,7 @@ h2 {
   display: inline-flex;
   white-space: nowrap;
   /* Faster marquee speed */
-  animation: scroll 15s linear infinite;
+  animation: scroll 6s linear infinite !important;
 }
 
 .marquee.reverse .marquee-inner {
