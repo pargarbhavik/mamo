@@ -3824,3 +3824,37 @@ ul {
     height: 60vh;
   }
 }
+
+
+/* ================================
+   FORCE FIX: Mobile Menu Submenus
+   ================================ */
+
+/* Mobile only */
+@media (max-width: 991px) {
+
+  /* Hide ALL submenus by default */
+  .mobile-menu ul.nav-list ul {
+    display: none !important;
+    height: 0 !important;
+    overflow: hidden !important;
+    opacity: 0 !important;
+  }
+
+  /* Show submenu ONLY when Bootstrap adds .show */
+  .mobile-menu ul.nav-list ul.show {
+    display: block !important;
+    height: auto !important;
+    opacity: 1 !important;
+  }
+
+  /* Prevent accidental open state */
+  .mobile-menu ul.nav-list ul[aria-expanded="true"] {
+    display: none !important;
+  }
+
+  /* Allow open state ONLY with .show */
+  .mobile-menu ul.nav-list ul.show[aria-expanded="true"] {
+    display: block !important;
+  }
+}
