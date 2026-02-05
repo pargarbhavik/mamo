@@ -3887,10 +3887,6 @@ ul {
   }
 
 }
-
-
-
-
 /* ===============================
    Center wrap-image in mobile
    =============================== */
@@ -3912,4 +3908,38 @@ ul {
   }
 .wrap-image { width: 100%; }
 
+}
+
+/* 🔒 Force Blog submenu CLOSED by default on mobile */
+@media (max-width: 767px) {
+
+  /* Blog submenu */
+  #submenu31 {
+    display: none !important;
+    height: 0 !important;
+    overflow: hidden !important;
+  }
+
+  /* Reset expanded state */
+  [data-bs-target="#submenu31"] {
+    pointer-events: auto;
+  }
+
+}
+@media (max-width: 767px) {
+  span.sub {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+
+    margin: 24px auto 16px; /* TOP spacing fixed */
+    padding: 6px 16px;
+
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+
+    text-align: center;
+    white-space: nowrap;
+  }
 }
