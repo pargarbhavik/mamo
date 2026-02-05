@@ -223,6 +223,34 @@ This files table contents are outlined below>>>>>
   --bs-form-invalid-border-color: #dc3545;
 }
 
+/* Mobile fixes: ensure page hero headings are visible and not hidden under header */
+/* @media (max-width: 767.98px) {
+  .page-hero-section h1,
+  .page-hero-section .hero-content h1,
+  .page-hero-section .hero-content .h1 {
+    color: #212529 !important; 
+    font-size: 1.8rem !important;
+    line-height: 1.2 !important;
+  }
+
+  .page-hero-section {
+    padding-top: max(80px, 10vh) !important;
+  }
+} */
+
+
+@media (max-width: 768px) {
+  .title-animation {
+    margin-top: 60px;      
+    font-size: 24px;
+    line-height: 1.3;
+    text-align: center;
+    padding: 0 12px;
+  }
+}
+
+
+
 [data-bs-theme=dark] {
   color-scheme: dark;
   --bs-body-color: #dee2e6;
