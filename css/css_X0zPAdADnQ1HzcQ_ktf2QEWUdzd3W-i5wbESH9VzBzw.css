@@ -3938,26 +3938,5 @@ ul {
     display: block;
   }
 }
-/* header image */
-.hero-circle1 {
-  position: absolute;
-  top: 0%;
-  left: 65%;
-  transform: translate(-50%, -50%);
-  max-width: 480px;
-  display: block;
-}
-
-
-/* Mobile resize only */
-@media (max-width: 768px) {
-  .hero-circle1 {
-    right: 40px;          /* keep right */
-    top: 50%;
-    transform: translateY(-50%);
-    max-width: 500px;    /* smaller for mobile */
-  }
-}
-
 
 
