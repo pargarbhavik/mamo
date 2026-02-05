@@ -3955,7 +3955,7 @@ ul {
     right: 40px;          /* keep right */
     top: 50%;
     transform: translateY(-50%);
-    max-width: 200px;    /* smaller for mobile */
+    max-width: 500px;    /* smaller for mobile */
   }
 }
 
