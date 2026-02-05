@@ -3513,8 +3513,8 @@ ul {
 
   /* Move close button slightly up/right on small screens so it doesn't overlap inputs */
   #contactPopup .popup-right .close-btn{
-    top:6px;
-    right:10px;
+    top:-200px;
+    right:1px;
   }
 
 }
@@ -3825,36 +3825,65 @@ ul {
   }
 }
 
+/* ================= MOBILE VIEW ================= */
+@media (max-width: 768px) {
 
-/* ================================
-   FORCE FIX: Mobile Menu Submenus
-   ================================ */
-
-/* Mobile only */
-@media (max-width: 991px) {
-
-  /* Hide ALL submenus by default */
-  .mobile-menu ul.nav-list ul {
-    display: none !important;
-    height: 0 !important;
-    overflow: hidden !important;
-    opacity: 0 !important;
+  #contactPopup {
+    padding: 20px;
   }
 
-  /* Show submenu ONLY when Bootstrap adds .show */
-  .mobile-menu ul.nav-list ul.show {
-    display: block !important;
-    height: auto !important;
-    opacity: 1 !important;
+  .modal-box {
+    flex-direction: column;
+    width: 100%;
+    max-width: 95%;
+    border-radius: 16px;
+    position: relative; /* important */
   }
 
-  /* Prevent accidental open state */
-  .mobile-menu ul.nav-list ul[aria-expanded="true"] {
-    display: none !important;
+  /* MOBILE CLOSE BUTTON */
+  .close-btn {
+    position: absolute;
+    top: 14px;
+    right: 14px;
+    font-size: 22px;
+    z-index: 999;
   }
 
-  /* Allow open state ONLY with .show */
-  .mobile-menu ul.nav-list ul.show[aria-expanded="true"] {
-    display: block !important;
+  .popup-left,
+  .popup-right {
+    width: 100%;
+    padding: 20px;
+    text-align: center;
   }
+
+  .popup-left img {
+    width: 60px;
+    margin-bottom: 10px;
+  }
+
+  .left-text h2 {
+    font-size: 20px;
+  }
+
+  .left-text p {
+    font-size: 14px;
+  }
+
+  .popup-right form {
+    width: 100%;
+  }
+
+  .popup-right input,
+  .popup-right textarea {
+    width: 100%;
+    font-size: 14px;
+    padding: 10px;
+  }
+
+  .popup-right button {
+    width: 100%;
+    padding: 12px;
+    font-size: 15px;
+  }
+
 }
