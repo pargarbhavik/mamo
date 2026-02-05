@@ -19921,6 +19921,20 @@ Recruiting Contact Area CSS
   background-color: white;
   margin-top: 12px;
 }
+
+.recruiting-contact-information .offices-info .item.wrap3 {
+  background-color: black;
+  margin-top: 12px;
+}
+
+.recruiting-contact-information .offices-info .item.wrap3 h5, .recruiting-contact-information .offices-info .item.wrap3 .h5 {
+  color: white;
+}
+
+.recruiting-contact-information .offices-info .item.wrap3 span {
+  color: white;
+}
+
 .recruiting-contact-information .offices-info .item.wrap2 h5, .recruiting-contact-information .offices-info .item.wrap2 .h5 {
   color: black;
 }
