@@ -3929,6 +3929,15 @@ ul {
     white-space: nowrap;
   }
 }
+@media (max-width: 767px) {
+  #submenu31.collapse {
+    display: none;
+  }
+
+  #submenu31.collapse.show {
+    display: block;
+  }
+}
 
 
 
