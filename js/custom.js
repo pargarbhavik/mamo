@@ -539,3 +539,13 @@ const countdownInit = () => {
 };
 document.addEventListener('DOMContentLoaded', countdownInit);
 
+// ======= Close Mobile Menu Dropdowns on Page Load =======
+const closeMobileMenuDropdowns = () => {
+  const collapseElements = document.querySelectorAll('.mobile-menu .collapse.show');
+  collapseElements.forEach((collapse) => {
+    collapse.classList.remove('show');
+  });
+};
+
+document.addEventListener('DOMContentLoaded', closeMobileMenuDropdowns);
+
