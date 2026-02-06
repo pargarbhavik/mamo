@@ -25721,4 +25721,14 @@ a.back-btn i,
 
 
 
-
+.typed-text{
+    background: linear-gradient(90deg,
+        #35F729,
+        #78E588,
+        #2CD73A,
+        #03C0C7
+    );
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
