@@ -15164,12 +15164,15 @@ a:hover {
     color: var(--White);
     text-decoration: underline
 }
+
 .footer-link {
-  margin-top: 40px;
+    margin-top: 40px;
 }
+
 .footer-right {
-  padding-top: 40px;
+    padding-top: 40px;
 }
+
 .common-footer2 .footer-right {
     display: flex;
     justify-content: space-between
@@ -15755,6 +15758,7 @@ a.back-btn .go-to-top-wrap em i.ph.ph-arrow-up.go-to-top,
     align-content: stretch;
     pointer-events: none
 }
+
 
 @media screen and (min-width:1200px)and (max-width:1599px) {
     .hero-circle-wrap {
@@ -25644,4 +25648,72 @@ a.back-btn i,
 .contact-form {
     position: relative;
 }
+/* ===============================
+   COMMON (Desktop + Mobile)
+================================ */
+.h-calc100vh-150 {
+    min-height: calc(100vh - 150px);
+}
+
+.hero-bg {
+    background-image: url("../images/hero.jpeg"); /* CHECK PATH */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    
+    position: relative;
+}
+
+
+
+
+/* ===============================
+   TABLET (<= 991px)
+================================ */
+@media (max-width: 991px) {
+    .h-calc100vh-150 {
+        min-height: 70vh;
+    }
+
+    .hero-bg {
+        background-position: center top;
+    }
+}
+
+/* ===============================
+   MOBILE (<= 576px)
+================================ */
+/* MOBILE IMAGE FIX ONLY */
+@media (max-width: 768px) {
+     /* Kill Bootstrap constraints */
+    header,
+    .container,
+    .container-fluid,
+    .row,
+    .col-12 {
+        max-width: 100% !important;
+        width: 100% !important;
+        margin: 0 !important;
+        padding: 0 !important;
+    }
+
+    .hero-bg {
+        position: relative;
+        background-image: url("../images/hero.jpeg"); /* correct path */
+        background-size: contain;   /* KEY FIX */
+        background-position: center;
+        background-repeat: no-repeat;
+        overflow: hidden;
+        
+        width: 100vw;
+        min-height: 59vh;           /* visible height */
+        background-color: #ffff;     /* fallback instead of grey */
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+}
+
 
