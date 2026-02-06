@@ -25656,7 +25656,7 @@ a.back-btn i,
 }
 
 .hero-bg {
-    background-image: url("../images/hero.jpeg"); /* CHECK PATH */
+    background-image: url("../images/mamo2.png"); /* CHECK PATH */
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -25699,21 +25699,22 @@ a.back-btn i,
     }
 
     .hero-bg {
-        position: relative;
-        background-image: url("../images/hero.jpeg"); /* correct path */
-        background-size: contain;   /* KEY FIX */
-        background-position: center;
-        background-repeat: no-repeat;
-        overflow: hidden;
-        
-        width: 100vw;
-        min-height: 59vh;           /* visible height */
-        background-color: #ffff;     /* fallback instead of grey */
+    position: relative;
+    background-image: url("../images/mamo2.png");
+    background-size: cover;      /* keep original image, no stretch */
+    background-position:2.5% center;   /* FIX: remove left gap */
+    background-repeat: no-repeat;
+    overflow: hidden;
 
-        display: flex;
-        align-items: center;
-        justify-content: center;
-    }
+    width: 100vw;
+    min-height: 59vh;
+    background-color: #fff;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
 }
 
 
