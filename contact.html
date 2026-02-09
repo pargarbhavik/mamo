@@ -753,37 +753,7 @@
                                     <img src="images/logog.png" alt="image">
                                 </div>
                             </div>
-                            <div class="offices-info" >
-                                <h3>Our Offices</h3>
-                                <div class="item wrap2">
-                                    <h5>Vadodara, India</h5>
-                                    <!--<span>159 Tech Street, Floor 3, San Francisco, CA 94105</span>-->
-                                    <!-- <span>Monday – Saturday: 10:00 AM – 7:00 PM IST </span> -->
-                                </div>
-                                <div class="item wrap3">
-                                    <h5>Dubai</h5>
-                                    <!--<span>159 Tech Street, Floor 3, San Francisco, CA 94105</span>-->
-                                    <!-- <span>Monday – Saturday: 10:00 AM – 7:00 PM IST </span> -->
-                                </div>
-                                <div class="item wrap2">
-                                    <h5>Bogota, Colombia</h5>
-                                    <!--<span>159 Tech Street, Floor 3, San Francisco, CA 94105</span>-->
-                                    <!-- <span>Monday – Saturday: 10:00 AM – 7:00 PM IST </span> -->
-                                </div>
-                                <div class="item wrap3">
-                                    <h5>Lima, Peru</h5>
-                                    <!--<span>159 Tech Street, Floor 3, San Francisco, CA 94105</span>-->
-                                    <!-- <span>Monday – Saturday: 10:00 AM – 7:00 PM IST </span> -->
-                                </div>
-                                <div class="item wrap2">
-                                    <h5>Panama</h5>
-                                    <!--<span>159 Tech Street, Floor 3, San Francisco, CA 94105</span>-->
-                                    <!-- <span>Monday – Saturday: 10:00 AM – 7:00 PM IST </span> -->
-                                </div>
-                                
-                                
-                                
-                            </div>
+                           
                         </div>
                     </div>
                     <div class="col-xl-7 col-md-12">
@@ -916,6 +886,34 @@
     transform: translateY(-3px);
     box-shadow: 0 15px 35px rgba(31,169,127,0.35);
   }
+
+  /* Footer Alignment Styles */
+  .footer-left {
+    padding-left: 0 !important;
+  }
+
+  .footer-left .social-ul {
+    margin-top: 12px !important;
+    margin-left: 0 !important;
+  }
+
+  .footer-left .iso-ul {
+    margin-top: 12px !important;
+    margin-left: 0 !important;
+  }
+
+  .footer-right {
+    padding-right: 0 !important;
+  }
+
+  @media (max-width: 768px) {
+    .footer-left {
+      padding-left: 0 !important;
+    }
+    .footer-right {
+      padding-right: 0 !important;
+    }
+  }
 </style>
 
                 </div>
@@ -992,19 +990,28 @@
                             </div>
                             <div class="col-lg-4 col-md-5">
                                 <div class="row">
-                                    <div class="col-6">
+                                    <div class="col-12 col-md-6">
                                         <div class="footer-right">
-                                            <ul class="footer-link">
-                                                <li><a href="/">Home</a></li>
-                                                <li><a href="/about-us.html">About Us</a></li>
-                                                <li><a href="/contact.html">Contact</a></li>
+                                            <ul class="footer-link" style="margin: 0; padding: 0;">
+                                                <li style="margin-bottom: 6px;"><a href="/">Home</a></li>
+                                                <li style="margin-bottom: 6px;"><a href="/about-us.html">About Us</a></li>
+                                                <li style="margin-bottom: 0;"><a href="/contact.html">Contact</a></li>
                                                 
                                             </ul>
                                         </div>
                                     </div>
+                                    <div class="col-12 col-md-6" style="padding-left: 0;">
+                                        <div style="width: 100%;">
+                                            <h3 style="color: #ffffff; font-size: clamp(18px, 5vw, 24px); margin-bottom: 8px; margin-top: 0; padding: 0;">Our Offices</h3>
+                                            <p style="color: #e5e7eb; font-size: clamp(13px, 3.5vw, 16px); line-height: 1.6; margin: 0; padding: 0; flex-wrap: wrap;">
+                                                Vadodara, India &nbsp;&nbsp;&nbsp;&nbsp; Dubai &nbsp;&nbsp;&nbsp;&nbsp; Bogota, Colombia<br>
+                                                Lima, Peru &nbsp;&nbsp;&nbsp;&nbsp; Panama
+                                            </p>
+                                        </div>
+                                    </div>
                                 </div>
                                 <div class="hide-desktop show-mobile">
-                                    <ul class="social-ul">
+                                    <ul class="social-ul" style="margin: 12px 0 0 0; gap: 12px; padding: 0;">
                                         <li><a class="facebook"
                                                                             href="https://www.facebook.com/p/MaMo-Technolabs-LLP-61551035098279/"
                                                                             target="_blank"><img
@@ -1026,7 +1033,7 @@
                                     </ul>
                                 </div>
                                 <div class="hide-desktop show-mobile">
-                                    <ul class="iso-ul">
+                                    <ul class="iso-ul" style="margin: 8px 0 0 0; padding: 0;">
                                         <li><img src="images/77942-I%2526M%20BU%20-%20CMMI%20Development%20-%20Maturity%20Level%20-%203.png" alt="CMMI" width="697" height="250" loading="lazy"></li>
                                         <li><img src="images/iso1.png" alt="iso1" width="168" height="168" loading="lazy"></li>
                                         <li><img src="images/iso2.png" alt="iso2" width="168" height="168" loading="lazy"></li>
