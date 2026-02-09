@@ -4512,6 +4512,27 @@ document.addEventListener("DOMContentLoaded", function () {
             width: auto !important;
             padding: 0 !important;
         }
+        
+        /* Fix footer Our Offices section positioning */
+        @media (min-width: 992px) {
+            .common-footer2 .col-lg-4.col-md-5 {
+                padding: 0 25px;
+            }
+            
+            .common-footer2 .col-lg-4.col-md-5 .col-12.col-md-6:last-child {
+                padding-left: 20px !important;
+            }
+        }
+        
+        @media (max-width: 991.98px) and (min-width: 768px) {
+            .common-footer2 .col-lg-4.col-md-5 {
+                padding: 0 15px;
+            }
+            
+            .common-footer2 .col-lg-4.col-md-5 .col-12.col-md-6:last-child {
+                padding-left: 15px !important;
+            }
+        }
     </style>
 
 
