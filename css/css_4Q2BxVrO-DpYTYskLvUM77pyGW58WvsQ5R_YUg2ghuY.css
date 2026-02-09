@@ -25717,9 +25717,80 @@ a.back-btn i,
 
 }
 
+/* ===============================
+   HERO BG (REQUIRED)
+================================ */
+.hero-bg {
+    position: relative; /* anchor for absolute logo */
+}
+
+/* ===============================
+   HERO LOGO ANIMATION
+   Top → Down + Left → Right → Stop
+================================ */
+.hero-logo {
+    position: absolute;
+    top: 150px;              /* final vertical position */
+    left: 856px;             /* final horizontal position */
+
+     /* 🚀 VERY BIG DESKTOP LOGO */
+    width: 420px;            /* BIG */
+    height: 400px;           /* BIG */
+    max-width: 1000px;
+
+    background-image: url("../images/hero-circle1new.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+
+    z-index: 20;             /* above GIF & content */
+
+    /* start position (UP + LEFT) */
+    transform: translate(-120px, -80px);
+    opacity: 0;
+
+    animation: heroLogoDropSlide 1.4s ease-out forwards;
+}
 
 
+/* ===============================
+   KEYFRAMES
+================================ */
+@keyframes heroLogoDropSlide {
+    to {
+        transform: translate(0, 0);
+        opacity: 1;
+    }
+}
 
+/* ===============================
+   TABLET (<= 991px)
+================================ */
+@media (max-width: 991px) {
+    .hero-logo {
+        width: 60px;
+        height: 60px;
+        top: 730px;
+        left: 630px;
+    }
+}
+
+/* ===============================
+   MOBILE (<= 768px)
+================================ */
+@media (max-width: 768px) {
+    .hero-logo {
+        width: 333px;
+        height: 150px;
+
+        top: 15px;
+        left: 20px;
+
+        /* slightly shorter movement on mobile */
+        transform: translate(-90px, -60px);
+        animation-duration: 1.1s;
+    }
+}
 
 .typed-text{
     background: linear-gradient(90deg,
