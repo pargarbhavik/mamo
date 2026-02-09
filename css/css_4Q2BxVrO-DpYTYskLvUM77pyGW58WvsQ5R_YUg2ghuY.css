@@ -25656,7 +25656,7 @@ a.back-btn i,
 }
 
 .hero-bg {
-    background-image: url("../images/mamo2.png"); /* CHECK PATH */
+    background-image: url("../images/mm.gif"); /* CHECK PATH */
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -25700,7 +25700,7 @@ a.back-btn i,
 
     .hero-bg {
     position: relative;
-    background-image: url("../images/mamo2.png");
+    background-image: url("../images/mm.gif"); /* CHECK PATH */
     background-size: cover;      /* keep original image, no stretch */
     background-position:2.5% center;   /* FIX: remove left gap */
     background-repeat: no-repeat;
